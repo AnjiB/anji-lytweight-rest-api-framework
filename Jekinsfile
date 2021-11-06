@@ -1,0 +1,61 @@
+pipeline {
+    agent any
+
+    tools {
+        maven "M3"
+    }
+
+    stages {
+        
+        stage('Cleaning workspace') {
+            steps {
+             cleanWs()
+            }
+        }
+        
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnjiB/anji-lytweight-rest-api-framework']]])
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                sh "pwd"
+                dir("anji-lytweight-rest-api-framework") {
+                    sh "pwd"
+                    sh "mvn clean install -DskipTests"
+                }
+            }
+        }
+
+        stage('Run E2E tests') {
+             steps {
+                 dir("anji-lytweight-rest-api-framework") {
+                    sh "pwd"
+                    sh "mvn test -Pe2e -DautEnvironment=DEV"
+                }
+            }
+        }
+            
+    }
+    
+    post {
+            always {
+                junit(
+                 allowEmptyResults: true,
+                testResults: '**/surefire-reports/TEST-*.xml'
+                )
+                
+                publishHTML ([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: true,
+                    reportDir: 'anji-lytweight-rest-api-framework/target/surefire-reports/',
+                    reportFiles: 'emailable-report.html',
+                    reportName: 'RCov Report'
+                ])
+            }
+            
+        }
+}
