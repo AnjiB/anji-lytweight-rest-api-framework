@@ -4,7 +4,7 @@ package com.anji.framework.api.enums;
  * 
  * Request Headers enum
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 
 public enum ApiHeaders {

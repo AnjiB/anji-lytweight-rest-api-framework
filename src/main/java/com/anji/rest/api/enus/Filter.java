@@ -2,7 +2,8 @@ package com.anji.rest.api.enus;
 
 /**
  * Enum for Get Article Request query parameter
- * @author boddupally.anji
+ * 
+ * @author anjiboddupally
  */
 
 public enum Filter {

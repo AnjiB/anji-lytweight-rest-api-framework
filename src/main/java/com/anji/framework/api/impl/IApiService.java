@@ -2,6 +2,12 @@ package com.anji.framework.api.impl;
 
 import com.anji.framework.api.builder.RequestBuilder;
 
+/**
+ * API Contract
+ * 
+ * @author anjiboddupally
+ */
+
 public interface IApiService<T> {
 
 	ApiResponse<T> get(RequestBuilder builder) throws Exception;

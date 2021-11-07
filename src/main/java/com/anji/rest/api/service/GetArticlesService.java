@@ -12,7 +12,7 @@ import com.anji.framework.api.impl.BaseApiService;
  * 
  * Service for get articles api
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 public class GetArticlesService<ArticlesResponse> extends BaseApiService<ArticlesResponse> {
 

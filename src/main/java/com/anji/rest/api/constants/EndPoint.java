@@ -1,7 +1,8 @@
 package com.anji.rest.api.constants;
 
 /**
- * @author boddupally.anji
+ * 
+ * @author anjiboddupally
  *
  */
 public class EndPoint {

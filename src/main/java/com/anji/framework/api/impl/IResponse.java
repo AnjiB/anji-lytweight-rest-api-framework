@@ -2,6 +2,13 @@ package com.anji.framework.api.impl;
 
 import java.util.Map;
 
+/**
+ * 
+ * A generic response contract
+ * 
+ * @author anjiboddupally
+ */
+
 public interface IResponse<T> {
 
 	long getExecTime();

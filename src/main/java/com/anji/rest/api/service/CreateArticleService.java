@@ -12,7 +12,7 @@ import com.anji.rest.api.pojo.User;
  * 
  * Service for create article api
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 public class CreateArticleService<ArticleRequestAndResponse> extends BaseApiService<ArticleRequestAndResponse> {
 	

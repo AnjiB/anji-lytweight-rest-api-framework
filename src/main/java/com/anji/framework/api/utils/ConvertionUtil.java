@@ -8,15 +8,14 @@ import org.apache.commons.lang3.StringUtils;
 import com.anji.framework.api.builder.RequestBuilder;
 import com.anji.framework.api.enums.ApiHeaders;
 import com.anji.framework.api.impl.Client;
-import com.anji.framework.api.impl.ClientFactory;
+import com.anji.framework.api.impl.ClientService;
 
 import io.restassured.builder.RequestSpecBuilder;
 
 /**
+ * Util to convert RequestBuilder to RestAssured specific RequestSpecBuilder builder
  * 
- * Util that handles the conversion of various strings to pojos and vice-versa
- * 
- * @author boddupally.anji
+ * @author anjiboddupally
  *
  */
 public final class ConvertionUtil {
@@ -46,7 +45,7 @@ public final class ConvertionUtil {
 			requestSpecBuilder.setBody(builder.getRequestObject());
 		if(builder.isAuthRequired()) {
 			// login
-			Client client = ClientFactory.getClient(builder.getUsername(), builder.getPassword(), builder.isCachedClient());
+			Client client = ClientService.getClient(builder.getUsername(), builder.getPassword(), builder.isCachedClient());
 			requestSpecBuilder.addHeader(ApiHeaders.AUTH.getHeader(), "Token " + client.getAuthKey());
 		}
 			

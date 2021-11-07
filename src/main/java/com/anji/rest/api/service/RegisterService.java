@@ -1,9 +1,6 @@
 package com.anji.rest.api.service;
 
 import static com.anji.rest.api.constants.EndPoint.REGISTER;
-import static org.assertj.core.api.Assertions.assertThat;
-
-import org.apache.http.HttpStatus;
 
 import com.anji.framework.api.builder.RequestBuilder;
 import com.anji.framework.api.impl.ApiResponse;
@@ -15,7 +12,7 @@ import com.anji.rest.api.pojo.Request;
  * 
  * Service for register api
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 public class RegisterService<UserResponse> extends BaseApiService<UserResponse> {
 
@@ -30,8 +27,6 @@ public class RegisterService<UserResponse> extends BaseApiService<UserResponse> 
 		
 		ApiResponse<UserResponse> response =  post(builder);
 		
-		assertThat(response.getResponseCode()).isEqualTo(HttpStatus.SC_CREATED);
-
 		return response.getResponse();
 	}
 }

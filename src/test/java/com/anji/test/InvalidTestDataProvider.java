@@ -8,7 +8,7 @@ import com.anji.rest.api.data.TestDataFactory;
  * 
  * Data provider class that caters to the tests for various scenarios.
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 
 public class InvalidTestDataProvider {

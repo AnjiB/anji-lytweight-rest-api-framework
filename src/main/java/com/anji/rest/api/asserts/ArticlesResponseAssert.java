@@ -10,7 +10,7 @@ import com.anji.rest.api.pojo.ArticlesResponse;
 /**
  * Article Response Assertions
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  *
  */
 public class ArticlesResponseAssert extends AbstractAssert<ArticlesResponseAssert, ArticlesResponse> {

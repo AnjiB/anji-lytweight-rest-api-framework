@@ -10,9 +10,9 @@ import org.assertj.core.api.AbstractAssert;
 import com.anji.rest.api.pojo.ArticleRequestAndResponse;
 
 /**
- * Aritcle Response Assertions
+ * Article Response Assertions
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  *
  */
 public class ArticleResponseAssert extends AbstractAssert<ArticleResponseAssert, ArticleRequestAndResponse> {

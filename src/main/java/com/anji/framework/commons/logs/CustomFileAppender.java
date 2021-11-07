@@ -8,7 +8,7 @@ import org.apache.log4j.FileAppender;
 /**
  * Custom file appender which helps to generate unique log file each time.
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  *
  */
 public class CustomFileAppender extends  FileAppender {

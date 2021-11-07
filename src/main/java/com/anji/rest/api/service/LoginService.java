@@ -11,7 +11,7 @@ import com.anji.rest.api.pojo.Request;
  * 
  * Service for login api
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 
 public class LoginService<UserResponse> extends BaseApiService<UserResponse> {

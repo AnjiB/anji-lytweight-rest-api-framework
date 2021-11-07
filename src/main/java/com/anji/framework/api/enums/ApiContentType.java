@@ -4,7 +4,7 @@ package com.anji.framework.api.enums;
  * 
  * Content-Type enum
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 public enum ApiContentType {
 

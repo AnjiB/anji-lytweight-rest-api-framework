@@ -9,7 +9,7 @@ import com.anji.rest.api.pojo.ErrorsJson;
 /**
  * Error Response Assertions
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  *
  */
 public class ErrorResponseAssert extends AbstractAssert<ErrorResponseAssert, ErrorsJson> {

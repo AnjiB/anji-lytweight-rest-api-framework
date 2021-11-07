@@ -13,7 +13,7 @@ import org.yaml.snakeyaml.error.YAMLException;
 /**
  * Loads the configuration from appConfiguration.yaml file
  * 
- * @author anji.boddupally
+ * @author anjiboddupally
  *
  */
 public class ConfigLoader {

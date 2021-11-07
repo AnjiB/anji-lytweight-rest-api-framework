@@ -4,12 +4,19 @@ import com.anji.rest.api.asserts.ArticleResponseAssert;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Article Request/Response Pojo
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
+ * 
+ * TODO : split it in future
  */
 
+@Setter
+@Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ArticleRequestAndResponse {
 
@@ -18,22 +25,6 @@ public class ArticleRequestAndResponse {
 	
 	@JsonProperty("errors")
 	private ErrorsJson errors;
-
-	public Article getArticle() {
-		return article;
-	}
-
-	public void setArticle(Article article) {
-		this.article = article;
-	}
-	
-	public ErrorsJson getErrors() {
-		return errors;
-	}
-
-	public void setErrors(ErrorsJson errors) {
-		this.errors = errors;
-	}
 
 	public ArticleResponseAssert articleAssertThat() {
 		return new ArticleResponseAssert(this);

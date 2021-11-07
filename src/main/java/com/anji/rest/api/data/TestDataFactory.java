@@ -1,24 +1,30 @@
 package com.anji.rest.api.data;
 
-import org.apache.commons.lang3.RandomStringUtils;
+import java.util.Arrays;
+import java.util.Collections;
 
 import com.anji.framework.commons.config.ConfigLoader;
 import com.anji.rest.api.pojo.Article;
 import com.anji.rest.api.pojo.ArticleRequestAndResponse;
 import com.anji.rest.api.pojo.Request;
 import com.anji.rest.api.pojo.User;
+import com.github.javafaker.Faker;
+
 
 /**
  * 
  * Test Data Factory which gives us different test data objects to be used in tests for various scenarios
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  */
 public class TestDataFactory {
+	
+	private static Faker faker = new Faker();
 
 	public static User getValidUser() {
-		return new User.Builder().withUsername("testuser" + RandomStringUtils.randomAlphanumeric(5).toLowerCase())
-				.withPassword(ConfigLoader.getDefaultPassword()).withEmail(RandomStringUtils.randomAlphanumeric(5).toLowerCase() + "@example.com").build();
+		
+		return User.builder().username("testuser" + faker.name().firstName())
+				.password(ConfigLoader.getDefaultPassword()).email(faker.internet().safeEmailAddress()).build();
 	}
 
 	public static Request getValidUserRequest() {
@@ -30,11 +36,12 @@ public class TestDataFactory {
 	
 	public static ArticleRequestAndResponse getValidArticle() {
 		ArticleRequestAndResponse ar = new ArticleRequestAndResponse();	
-		Article article = new Article.Builder()
-				.withArticleTitle(RandomStringUtils.randomAlphanumeric(50))
-				.withArticleBody(RandomStringUtils.randomAlphanumeric(50))
-				.withArticleDescription(RandomStringUtils.randomAlphanumeric(50))
-				.withArticleTags(RandomStringUtils.randomAlphanumeric(5))
+		Article article = Article.builder()
+				.title(faker.lorem().fixedString(20))
+				.body(faker.lorem().paragraph())
+				.description(faker.lorem().sentence())
+				.tag(faker.lorem().fixedString(5))
+				.tag(faker.lorem().fixedString(5))
 				.build();
 		ar.setArticle(article);
 		return ar;
@@ -42,11 +49,11 @@ public class TestDataFactory {
 	
 	public static ArticleRequestAndResponse getArticleObjectWithEmptyValues() {
 		ArticleRequestAndResponse ar = new ArticleRequestAndResponse();	
-		Article article = new Article.Builder()
-				.withArticleTitle("")
-				.withArticleBody("")
-				.withArticleDescription("")
-				.withArticleTags("")
+		Article article = Article.builder()
+				.title("")
+				.body("")
+				.description("")
+				.tagList(Collections.emptyList())
 				.build();
 		ar.setArticle(article);
 		return ar;
@@ -54,11 +61,11 @@ public class TestDataFactory {
 	
 	public static ArticleRequestAndResponse getValidArticleWithSpecialCharacters() {
 		ArticleRequestAndResponse ar = new ArticleRequestAndResponse();	
-		Article article = new Article.Builder()
-				.withArticleTitle(RandomStringUtils.randomAlphanumeric(50))
-				.withArticleBody(RandomStringUtils.randomAlphanumeric(50))
-				.withArticleDescription(RandomStringUtils.randomAlphanumeric(50))
-				.withArticleTags("<script>alert();</script>", "!@#$%\\0[]&*()+_()")
+		Article article = Article.builder()
+				.title(faker.lorem().fixedString(20))
+				.body(faker.lorem().paragraph())
+				.description(faker.lorem().sentence())
+				.tagList(Arrays.asList("<script>alert();</script>", "!@#$%\\0[]&*()+_()"))
 				.build();
 		
 		ar.setArticle(article);

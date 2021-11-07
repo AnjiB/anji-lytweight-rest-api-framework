@@ -14,7 +14,7 @@ import org.testng.xml.XmlSuite;
  * 
  * Generates the summary of test run on console.
  * 
- * @author anji.boddupally
+ * @author anjiboddupally
  *
  */
 public class SummaryReportListener implements IReporter {

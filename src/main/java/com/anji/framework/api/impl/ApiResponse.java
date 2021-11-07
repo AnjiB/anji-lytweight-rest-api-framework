@@ -7,9 +7,9 @@ import io.restassured.http.Header;
 import io.restassured.response.Response;
 
 /**
- * Response object to be used by tests for assertions
+ * A generic response object to be used by tests for assertions
  * 
- * @author boddupally.anji
+ * @author anjiboddupally
  * 
  * @param <T>
  */

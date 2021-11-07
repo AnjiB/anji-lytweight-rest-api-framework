@@ -8,11 +8,16 @@ import org.testng.ITestResult;
 
 import com.anji.framework.commons.config.ConfigLoader;
 
+import io.restassured.RestAssured;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
+
 
 /**
- * @author boddupally.anji
  *
  * Implementation of TestNG's ITestListner and IExecutionListener to perform activities pre and post test runs 
+ * 
+ * @author anjiboddupally
  */
 public class TestManagerListener implements ITestListener, IExecutionListener {
 
@@ -68,6 +73,9 @@ public class TestManagerListener implements ITestListener, IExecutionListener {
 
 	@Override
 	public void onExecutionStart() {
+		String enableLogs = System.getProperty("enableLogs");
+		if(Boolean.parseBoolean(enableLogs))
+			RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
 		ConfigLoader.loadCongifuration();
 	}
 

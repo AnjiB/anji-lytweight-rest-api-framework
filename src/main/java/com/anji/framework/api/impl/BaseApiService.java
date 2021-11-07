@@ -8,6 +8,14 @@ import com.anji.framework.api.builder.RequestBuilder;
 
 import io.restassured.builder.RequestSpecBuilder;
 
+/**
+ * 
+ * Rest Assured Implementation of IAPIService.
+ * 
+ * @author anjiboddupally
+ */
+
+
 public abstract class BaseApiService<T> implements IApiService<T> {
 
 	private Class<T> klass;

@@ -7,6 +7,13 @@ import com.anji.rest.api.pojo.UserResponse;
 import com.anji.rest.api.pojo.User;
 import com.anji.rest.api.service.LoginService;
 
+/**
+ * 
+ * Client to login to the system and stores the auth-key
+ * 
+ * @author anjiboddupally
+ */
+
 public class Client {
 	
 	private String username;

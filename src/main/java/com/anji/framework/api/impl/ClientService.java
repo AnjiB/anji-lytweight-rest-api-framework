@@ -8,9 +8,16 @@ import com.google.common.base.Preconditions;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
-public class ClientFactory {
+/**
+ * A service that gives Client object. You can decide if you want to cache the client so 
+ * that you don't need login to the system each time.
+ * 
+ * @author anjiboddupally
+ */
 
-private static final Logger LOGGER = Logger.getLogger(ClientFactory.class);
+public class ClientService {
+
+private static final Logger LOGGER = Logger.getLogger(ClientService.class);
 	
 	private static ClientServiceCache cache = ClientServiceCache.getInstance();
 	

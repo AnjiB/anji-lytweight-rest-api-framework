@@ -1,9 +1,6 @@
 package com.anji.test;
 
 import static com.anji.rest.api.constants.EndPoint.ARTICLES;
-import static org.apache.http.HttpStatus.SC_CREATED;
-import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
-import static org.apache.http.HttpStatus.SC_UNPROCESSABLE_ENTITY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Map;
@@ -27,6 +24,11 @@ import com.anji.rest.api.service.RegisterService;
 import com.google.common.collect.Maps;
 
 public class CreateArticleTest {
+	
+	private static int SC_CREATED = 201;
+	private static int SC_OK = 200;
+	private static int SC_UNAUTHORIZED = 401;
+	private static int SC_UNPROCESSABLE_ENTITY = 422;
 
 	private Request userRequest;
 
@@ -63,6 +65,14 @@ public class CreateArticleTest {
 	@Test(description = "Testing if valid user can create the article or not")
 	public void testCreateArticle() throws Exception {
 
+		// Article count should be 0 before it is created
+		Map<String, String> queryParam = Maps.newHashMap();
+		queryParam.put(Filter.author.name(), userRequest.getUser().getUsername());
+
+		ApiResponse<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
+		assertThat(articlesResponse.getResponseCode()).isEqualTo(SC_OK);
+		articlesResponse.getResponse().assertThat().articleCountIs(0);
+		
 		ArticleRequestAndResponse requestObject = TestDataFactory.getValidArticle();
 
 		ApiResponse<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
@@ -71,18 +81,16 @@ public class CreateArticleTest {
 		assertThat(response.getResponseCode()).isEqualTo(SC_CREATED);
 		ArticleRequestAndResponse aResponse = response.getResponse();
 
+		// verify created article content in response
 		aResponse.articleAssertThat().thereIsNoError().articleBodyIs(requestObject.getArticle().getBody())
 				.articleDescriptionIs(requestObject.getArticle().getDescription())
 				.articleTitleIs(requestObject.getArticle().getTitle())
 				.articleTagListIs(requestObject.getArticle().getTagList())
 				.authorIs(userRequest.getUser().getUsername());
 
-		// check if article is available in the system.
-		Map<String, String> queryParam = Maps.newHashMap();
-		queryParam.put(Filter.author.name(), userRequest.getUser().getUsername());
-
-		ApiResponse<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
-		assertThat(response.getResponseCode()).isEqualTo(SC_CREATED);
+		// Article count should be 1 after it is created
+		articlesResponse = getArticleService.getArticles(queryParam);
+		assertThat(articlesResponse.getResponseCode()).isEqualTo(SC_OK);
 		articlesResponse.getResponse().assertThat().articleCountIs(1);
 
 	}
@@ -92,6 +100,15 @@ public class CreateArticleTest {
 	 */
 	@Test(description = "Testing if valid user can create the article or not with special characters")
 	public void testCreateArticleWithSpecialCharacters() throws Exception {
+		
+		
+		// Article count should be 0 before it is created
+		Map<String, String> queryParam = Maps.newHashMap();
+		queryParam.put(Filter.author.name(), userRequest.getUser().getUsername());
+
+		ApiResponse<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
+		assertThat(articlesResponse.getResponseCode()).isEqualTo(SC_OK);
+		articlesResponse.getResponse().assertThat().articleCountIs(0);
 
 		ArticleRequestAndResponse requestObject = TestDataFactory.getValidArticle();
 
@@ -101,18 +118,17 @@ public class CreateArticleTest {
 		assertThat(response.getResponseCode()).isEqualTo(SC_CREATED);
 		ArticleRequestAndResponse aResponse = response.getResponse();
 
+		// verify created article content in response
 		aResponse.articleAssertThat().thereIsNoError().articleBodyIs(requestObject.getArticle().getBody())
 				.articleDescriptionIs(requestObject.getArticle().getDescription())
 				.articleTitleIs(requestObject.getArticle().getTitle())
 				.articleTagListIs(requestObject.getArticle().getTagList())
 				.authorIs(userRequest.getUser().getUsername());
 
-		// check if article is available in the system.
-		Map<String, String> queryParam = Maps.newHashMap();
-		queryParam.put(Filter.author.name(), userRequest.getUser().getUsername());
-
-		ApiResponse<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
-		assertThat(response.getResponseCode()).isEqualTo(SC_CREATED);
+		
+		// Article count should be 1 after it is created
+		articlesResponse = getArticleService.getArticles(queryParam);
+		assertThat(articlesResponse.getResponseCode()).isEqualTo(SC_OK);
 		articlesResponse.getResponse().assertThat().articleCountIs(1);
 
 	}
