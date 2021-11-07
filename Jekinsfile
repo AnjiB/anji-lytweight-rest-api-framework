@@ -13,28 +13,53 @@ pipeline {
             }
         }
         
-        stage('Checkout') {
+        stage('Pull Code') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnjiB/anji-lytweight-rest-api-framework']]])
+                sh "pwd"
+                sh "mkdir dev_code"
+                sh "mkdir test_code"
+                dir("dev_code") {
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnjiB/anji-kot-lin']]])
+                }
+                dir("test_code") {
+                     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnjiB/anji-lytweight-rest-api-framework']]])
+                }
+                sh "ls"
+                
             }
         }
         
-        stage('Build') {
+        stage('Build Dev Environement') {
             steps {
                 sh "pwd"
-                dir("anji-lytweight-rest-api-framework") {
-                    sh "pwd"
+                sh "ls"
+                dir("dev_code") {
+                    sh "ls" 
+                    sh "./gradlew clean build"
+                    sh "./gradlew run &"
+                    sh "echo waiting for 30 seconds"
+                    sleep(time:30, unit:"SECONDS")
+                    sh "curl -v http://localhost:9000/"
+                }
+            }
+        }
+        
+        stage('Build Test Project') {
+            steps {
+                sh "pwd"
+                dir("test_code") {
+                    sh "ls"
                     sh "mvn clean install -DskipTests"
                 }
             }
         }
 
         stage('Run E2E tests') {
-             steps {
-                 dir("anji-lytweight-rest-api-framework") {
+                steps {
                     sh "pwd"
-                    sh "mvn test -Pe2e -DautEnvironment=DEV"
-                }
+                    dir("test_code") {
+                        sh "mvn test -Pe2e -DautEnvironment=QA -DenableLogs=true"
+                    }
             }
         }
             
@@ -51,7 +76,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
-                    reportDir: 'anji-lytweight-rest-api-framework/target/surefire-reports/',
+                    reportDir: 'test_code/target/surefire-reports/',
                     reportFiles: 'emailable-report.html',
                     reportName: 'RCov Report'
                 ])
