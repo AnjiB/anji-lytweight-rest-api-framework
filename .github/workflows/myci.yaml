@@ -29,7 +29,7 @@ jobs:
     - name: Build with Gradle
       run: |
         ./gradlew clean build
-        ./gradlew run
+        ./gradlew run &
         sleep 30
         curl -v http://localhost:9000/
       
