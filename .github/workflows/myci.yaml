@@ -32,4 +32,14 @@ jobs:
         ./gradlew run &
         sleep 30
         curl -v http://localhost:9000/
+    - name: Pull Code
+      uses: actions/checkout@v2
+    - name: test
+      run: |
+        pwd
+        ls
+        mvn test -Pe2e -DautEnvironment=QA -DenableLogs=true
+        ls
       
+    
+  
