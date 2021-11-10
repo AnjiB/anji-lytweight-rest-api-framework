@@ -22,10 +22,7 @@ import io.restassured.specification.RequestSpecification;
 
 
 public abstract class BaseApiService<T> implements IApiService<T> {
-	
-
-	private RequestSpecBuilder requestSpecBuilder = new  RequestSpecBuilder();
-	
+		
 	private String baseUri;
 
 	private Class<T> klass;
@@ -33,7 +30,6 @@ public abstract class BaseApiService<T> implements IApiService<T> {
 	public BaseApiService(String basePath, Class<T> kClass) {
 		this.baseUri = basePath;
 		this.klass = kClass;
-		requestSpecBuilder.setBaseUri(baseUri);
 	}
 
 	@Override
@@ -64,8 +60,13 @@ public abstract class BaseApiService<T> implements IApiService<T> {
 	
 	private RequestSpecification getSpecBuilder(RequestBuilder builder) throws Exception {
 		
-		if(StringUtils.isNotEmpty(builder.getPathUrl()))
-			requestSpecBuilder.setBasePath(builder.getPathUrl());
+		RequestSpecBuilder requestSpecBuilder = new  RequestSpecBuilder();
+		
+		requestSpecBuilder.setBaseUri(baseUri);
+		
+		if(builder.getContentType() != null) {
+			requestSpecBuilder.setContentType(builder.getContentType().getContentType());
+		}
 		
 		if(StringUtils.isNotEmpty(builder.getPathUrl()))
 			requestSpecBuilder.setBasePath(builder.getPathUrl());
@@ -73,9 +74,10 @@ public abstract class BaseApiService<T> implements IApiService<T> {
 		if(builder.getQueryParameters() != null && !builder.getQueryParameters().isEmpty())
 			requestSpecBuilder.addQueryParams(builder.getQueryParameters());
 		
-		if(builder.getReqHeaders() != null && !builder.getReqHeaders().isEmpty())
+		if(builder.getReqHeaders() != null && !builder.getReqHeaders().isEmpty()) {
 			requestSpecBuilder.addHeaders(builder.getReqHeaders());
-		
+		}
+
 		if(builder.getCookies() != null && !builder.getCookies().isEmpty())
 			requestSpecBuilder.addCookies(builder.getCookies());
 		
@@ -89,7 +91,9 @@ public abstract class BaseApiService<T> implements IApiService<T> {
 		
 		requestSpecBuilder.setConfig(getConfig(builder.getWaitTime()));
 	
-		return requestSpecBuilder.build();
+		RequestSpecification specification = requestSpecBuilder.build();
+				
+		return specification;
 	}
 
 }

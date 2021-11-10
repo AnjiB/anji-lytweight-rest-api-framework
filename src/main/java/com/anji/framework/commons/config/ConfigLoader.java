@@ -48,6 +48,9 @@ public class ConfigLoader {
 	 * @return Map
 	 */
 	public static Map<String, String> getConfig() {
+		if(config != null && config.isEmpty())
+			loadCongifuration();
+			
 		return config;
 	}
 

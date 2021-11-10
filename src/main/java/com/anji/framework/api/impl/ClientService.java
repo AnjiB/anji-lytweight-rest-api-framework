@@ -23,6 +23,8 @@ private static final Logger LOGGER = Logger.getLogger(ClientService.class);
 	
 	public static Client getClient(String username, String password, boolean isAddToCache) throws Exception {
 
+		LOGGER.info("Getting client for the user: " + username);
+		
 		Client client = null;
 
 		if (isAddToCache) {
@@ -38,9 +40,11 @@ private static final Logger LOGGER = Logger.getLogger(ClientService.class);
 			
 			
 		} else {
+			LOGGER.info("Not getting user from cache");
 			if(username != null)
 				cache.remove(username);
 			client = new Client(username, password);
+			LOGGER.info("Login as " + username);
 			client.login();
 		}
 		return client;
