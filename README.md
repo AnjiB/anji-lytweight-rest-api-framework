@@ -49,4 +49,4 @@ Framework is built on Java and below are the requirements to run the tests
 In the folder `surefire-reports` you will see emailable-report.html and index.html which tells you about the overall test run status.
 
 ## Next Steps
-* Integrating with Allure for reports
+* Github workflow
