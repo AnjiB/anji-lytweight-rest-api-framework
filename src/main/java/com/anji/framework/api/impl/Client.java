@@ -1,5 +1,6 @@
 package com.anji.framework.api.impl;
 
+import static com.anji.framework.api.constants.ResponseStatusCode.SC_OK;
 import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
 
@@ -42,10 +43,10 @@ public class Client {
 		
 		LoginService<UserResponse> loginService = new LoginService<>(UserResponse.class);
 		ApiResponse<UserResponse> loginResponse = loginService.login(request);
-		Assertions.assertThat(loginResponse.getResponseCode()).as("Login is not successful").isEqualTo(200);
+		Assertions.assertThat(loginResponse.getResponseCode()).as("Login is not successful").isEqualTo(SC_OK);
 		
 		authKey = loginResponse.getResponse().getUser().getToken();
-		LOGGER.info("Login is successful for the user" + username);
+		LOGGER.info("Login is successful for the user: " + username);
 	}
 	
 	public String getAuthKey() {
