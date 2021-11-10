@@ -13,7 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Pull Code
+      uses: actions/checkout@v2
       with: 
         repository: https://github.com/AnjiB/anji-kot-lin
         ref: master
@@ -26,8 +27,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-    - run: ./gradlew clean build
-    - run: ./gradlew run
-    - run: sleep 30
-    - run: curl -v http://localhost:9000/
+      run: |
+        ./gradlew clean build
+        ./gradlew run
+        sleep 30
+        curl -v http://localhost:9000/
       
