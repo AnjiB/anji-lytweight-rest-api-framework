@@ -18,7 +18,7 @@ public class CreateArticleService<ArticleRequestAndResponse> extends BaseApiServ
 	
 	
 	public CreateArticleService(Class<ArticleRequestAndResponse> kClass) {
-		super(kClass);
+		super(ConfigLoader.getBaseUrl(), kClass);
 	}
 
 	public ApiResponse<ArticleRequestAndResponse> createArticle(String username, String password, ArticleRequestAndResponse ar, boolean authRequired) throws Exception {

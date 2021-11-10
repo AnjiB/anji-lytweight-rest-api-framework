@@ -5,6 +5,7 @@ import static com.anji.rest.api.constants.EndPoint.LOGIN;
 import com.anji.framework.api.builder.RequestBuilder;
 import com.anji.framework.api.impl.ApiResponse;
 import com.anji.framework.api.impl.BaseApiService;
+import com.anji.framework.commons.config.ConfigLoader;
 import com.anji.rest.api.pojo.Request;
 
 /**
@@ -17,7 +18,7 @@ import com.anji.rest.api.pojo.Request;
 public class LoginService<UserResponse> extends BaseApiService<UserResponse> {
 	
 	public LoginService(Class<UserResponse> kClass) {
-		super(kClass);
+		super(ConfigLoader.getBaseUrl(), kClass);
 	}
 
 	public ApiResponse<UserResponse> login(Request request) throws Exception {

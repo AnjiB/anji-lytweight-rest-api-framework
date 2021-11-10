@@ -7,6 +7,7 @@ import java.util.Map;
 import com.anji.framework.api.builder.RequestBuilder;
 import com.anji.framework.api.impl.ApiResponse;
 import com.anji.framework.api.impl.BaseApiService;
+import com.anji.framework.commons.config.ConfigLoader;
 
 /**
  * 
@@ -17,7 +18,7 @@ import com.anji.framework.api.impl.BaseApiService;
 public class GetArticlesService<ArticlesResponse> extends BaseApiService<ArticlesResponse> {
 
 	public GetArticlesService(Class<ArticlesResponse> kClass) {
-		super(kClass);
+		super(ConfigLoader.getBaseUrl(), kClass);
 
 	}
 

@@ -5,6 +5,7 @@ import static com.anji.rest.api.constants.EndPoint.REGISTER;
 import com.anji.framework.api.builder.RequestBuilder;
 import com.anji.framework.api.impl.ApiResponse;
 import com.anji.framework.api.impl.BaseApiService;
+import com.anji.framework.commons.config.ConfigLoader;
 import com.anji.rest.api.pojo.Request;
 
 
@@ -17,7 +18,7 @@ import com.anji.rest.api.pojo.Request;
 public class RegisterService<UserResponse> extends BaseApiService<UserResponse> {
 
 	public RegisterService(Class<UserResponse> kClass) {
-		super(kClass);
+		super(ConfigLoader.getBaseUrl(), kClass);
 	}
 
 	public UserResponse registerUser(Request request) throws Exception {

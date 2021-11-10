@@ -4,7 +4,6 @@ package com.anji.framework.api.builder;
 import java.util.Map;
 
 import com.anji.framework.api.enums.ApiContentType;
-import com.anji.framework.commons.config.ConfigLoader;
 
 import lombok.Builder;
 import lombok.Builder.Default;
@@ -36,9 +35,6 @@ public class RequestBuilder {
 	@Default
 	private boolean isCachedClient = false;
 	
-	@Default
-	private String baseUrl = ConfigLoader.getBaseUrl();;
-	
 	private Map<String, String> queryParameters;
 	
 	private Map<String, String> cookies;
@@ -47,5 +43,8 @@ public class RequestBuilder {
 	
 	@Default
 	private ApiContentType contentType = ApiContentType.JSON;
+	
+	@Default
+	private long waitTime = 10000;
 	
 }
