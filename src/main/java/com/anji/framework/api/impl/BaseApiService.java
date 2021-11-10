@@ -1,12 +1,17 @@
 package com.anji.framework.api.impl;
 
+import static com.anji.framework.api.utils.ApiUtil.getConfig;
 import static io.restassured.RestAssured.given;
-import static com.anji.framework.api.utils.ConvertionUtil.transform;
+
+import java.util.Objects;
+
+import org.apache.commons.lang3.StringUtils;
 
 import com.anji.framework.api.builder.RequestBuilder;
-
+import com.anji.framework.api.enums.ApiHeaders;
 
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
 
 /**
  * 
@@ -17,40 +22,78 @@ import io.restassured.builder.RequestSpecBuilder;
 
 
 public abstract class BaseApiService<T> implements IApiService<T> {
+		
+	private String baseUri;
 
 	private Class<T> klass;
 
-	public BaseApiService(Class<T> kClass) {
+	public BaseApiService(String basePath, Class<T> kClass) {
+		this.baseUri = basePath;
 		this.klass = kClass;
 	}
 
 	@Override
 	public ApiResponse<T> get(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder).build()).get(), klass);
+		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).get(), klass);
 	}
 
 	@Override
 	public ApiResponse<T> post(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder).build()).post(), klass);
+		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).post(), klass);
 	}
 
 	@Override
 	public ApiResponse<T> patch(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder).build()).patch(), klass);
+		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).patch(), klass);
 	}
 
 	@Override
 	public ApiResponse<T> put(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder).build()).put(), klass);
+		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).put(), klass);
 	}
 
 	@Override
 	public ApiResponse<T> delete(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder).build()).delete(), klass);
+		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).delete(), klass);
 	}
+	
+	
+	private RequestSpecification getSpecBuilder(RequestBuilder builder) throws Exception {
+		
+		RequestSpecBuilder requestSpecBuilder = new  RequestSpecBuilder();
+		
+		requestSpecBuilder.setBaseUri(baseUri);
+		
+		if(builder.getContentType() != null) {
+			requestSpecBuilder.setContentType(builder.getContentType().getContentType());
+		}
+		
+		if(StringUtils.isNotEmpty(builder.getPathUrl()))
+			requestSpecBuilder.setBasePath(builder.getPathUrl());
+		
+		if(builder.getQueryParameters() != null && !builder.getQueryParameters().isEmpty())
+			requestSpecBuilder.addQueryParams(builder.getQueryParameters());
+		
+		if(builder.getReqHeaders() != null && !builder.getReqHeaders().isEmpty()) {
+			requestSpecBuilder.addHeaders(builder.getReqHeaders());
+		}
 
-	private RequestSpecBuilder getSpecBuilder(RequestBuilder builder) throws Exception {
-		return transform(builder);
+		if(builder.getCookies() != null && !builder.getCookies().isEmpty())
+			requestSpecBuilder.addCookies(builder.getCookies());
+		
+		if(!Objects.isNull(builder.getRequestObject()))
+			requestSpecBuilder.setBody(builder.getRequestObject());
+		if(builder.isAuthRequired()) {
+			// login
+			Client client = ClientService.getClient(builder.getUsername(), builder.getPassword(), builder.isCachedClient());
+			requestSpecBuilder.addHeader(ApiHeaders.AUTH.getHeader(), "Token " + client.getAuthKey());
+		}
+		
+		requestSpecBuilder.setConfig(getConfig(builder.getWaitTime()));
+	
+		RequestSpecification specification = requestSpecBuilder.build();
+				
+		return specification;
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.anji.framework.api.impl;
 
+import static com.anji.framework.api.constants.ResponseStatusCode.SC_OK;
+import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
 
 import com.anji.rest.api.pojo.Request;
@@ -16,6 +18,8 @@ import com.anji.rest.api.service.LoginService;
 
 public class Client {
 	
+	private static final Logger LOGGER = Logger.getLogger(Client.class);
+	
 	private String username;
 	
 	private String password;
@@ -30,7 +34,7 @@ public class Client {
 	public void login() throws Exception {
 		// call login api
 		// extract key from login response
-		
+	
 		Request request = new Request();
 		User user = new User();
 		user.setEmail(username);
@@ -39,9 +43,10 @@ public class Client {
 		
 		LoginService<UserResponse> loginService = new LoginService<>(UserResponse.class);
 		ApiResponse<UserResponse> loginResponse = loginService.login(request);
-		Assertions.assertThat(loginResponse.getResponseCode()).as("Login is not successful").isEqualTo(200);
-		authKey = loginResponse.getResponse().getUser().getToken();
+		Assertions.assertThat(loginResponse.getResponseCode()).as("Login is not successful").isEqualTo(SC_OK);
 		
+		authKey = loginResponse.getResponse().getUser().getToken();
+		LOGGER.info("Login is successful for the user: " + username);
 	}
 	
 	public String getAuthKey() {

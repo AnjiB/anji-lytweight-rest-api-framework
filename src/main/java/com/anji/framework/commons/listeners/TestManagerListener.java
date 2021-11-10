@@ -73,7 +73,8 @@ public class TestManagerListener implements ITestListener, IExecutionListener {
 
 	@Override
 	public void onExecutionStart() {
-		String enableLogs = System.getProperty("enableLogs");
+		String enableLogs = "true";
+				//System.getProperty("enableLogs");
 		if(Boolean.parseBoolean(enableLogs))
 			RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
 		ConfigLoader.loadCongifuration();
