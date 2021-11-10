@@ -7,6 +7,7 @@ Thanks you providing me an opportunity to work on this assignment. I built a Res
 * [Tech Stack Used in Framework](#tech-stack-used-in-framework)
 * [Overview On Framework](#Overview-On-Framework)
 * [How to run the tests](#how-to-run-the-tests)
+* [Continuous Integration](#Continuous-Integration)
 * [Reporting](#reporting)
 * [Next Stpes](#next_steps)
 
@@ -43,6 +44,10 @@ Framework is built on Java and below are the requirements to run the tests
 * Go to root folder of the project
 * From the command line execute command `mvn test -Pe2e -DautEnvironment=DEV -DenableLogs=true` [enableLogs flag is to enable rest assured logs for API request and response]
 * If you want to run multiple tests in parallel, please change thread count in [testng.xml](https://github.com/AnjiB/anji-lytweight-rest-api-framework/blob/master/pom.xml) file.
+
+## Continuous integration
+* [Jenkins](https://github.com/AnjiB/anji-lytweight-rest-api-framework/blob/master/Jekinsfile)
+* GitLab (TODO)
 
 ## Reporting
 * Once the you run the tests, under root folder, you will see a folder with name `target/surefire-reports` will be generated.
