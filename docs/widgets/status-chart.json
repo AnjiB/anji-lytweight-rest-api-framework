@@ -1,0 +1,31 @@
+[ {
+  "uid" : "5832a17c60da9f3e",
+  "name" : "Testing if valid user can create the article or not with special characters",
+  "time" : {
+    "start" : 1636642143759,
+    "stop" : 1636642144730,
+    "duration" : 971
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba45d85c96bdec53",
+  "name" : "Testing if user can create the article without token or not",
+  "time" : {
+    "start" : 1636642141491,
+    "stop" : 1636642141948,
+    "duration" : 457
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8720428d1dbd2922",
+  "name" : "Testing if valid user can create the article or not",
+  "time" : {
+    "start" : 1636642142047,
+    "stop" : 1636642143425,
+    "duration" : 1378
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
