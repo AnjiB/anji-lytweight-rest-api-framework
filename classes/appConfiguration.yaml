@@ -1,0 +1,7 @@
+DEV:
+   BASE_URL: "http://localhost:9000"
+   DEFAULT_PASSWORD: "wachtwoord"
+QA:
+  BASE_URL: "http://localhost:9000"
+  DEFAULT_PASSWORD: "wachtwoord"
+  

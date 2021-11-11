@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="7.676" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="autEnvironment" value="QA"/>
+    <property name="enableLogs" value="true"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework/target/test-classes:/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework/target/classes:/Users/runner/.m2/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar:/Users/runner/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar:/Users/runner/.m2/repository/org/testng/testng/6.14.3/testng-6.14.3.jar:/Users/runner/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/runner/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/runner/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/runner/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/runner/.m2/repository/com/google/guava/guava/28.0-jre/guava-28.0-jre.jar:/Users/runner/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/runner/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/runner/.m2/repository/org/checkerframework/checker-qual/2.8.1/checker-qual-2.8.1.jar:/Users/runner/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/Users/runner/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/runner/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/Users/runner/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/runner/.m2/repository/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar:/Users/runner/.m2/repository/io/rest-assured/rest-assured/4.4.0/rest-assured-4.4.0.jar:/Users/runner/.m2/repository/org/codehaus/groovy/groovy/3.0.8/groovy-3.0.8.jar:/Users/runner/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.8/groovy-xml-3.0.8.jar:/Users/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/runner/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/runner/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/runner/.m2/repository/io/rest-assured/json-path/4.4.0/json-path-4.4.0.jar:/Users/runner/.m2/repository/org/codehaus/groovy/groovy-json/3.0.8/groovy-json-3.0.8.jar:/Users/runner/.m2/repository/io/rest-assured/rest-assured-common/4.4.0/rest-assured-common-4.4.0.jar:/Users/runner/.m2/repository/io/rest-assured/xml-path/4.4.0/xml-path-4.4.0.jar:/Users/runner/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/runner/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/runner/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/Users/runner/.m2/repository/com/github/javafaker/javafaker/1.0.2/javafaker-1.0.2.jar:/Users/runner/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23-android.jar:/Users/runner/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/runner/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/runner/.m2/repository/io/qameta/allure/allure-testng/2.13.0/allure-testng-2.13.0.jar:/Users/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.13.0/allure-java-commons-2.13.0.jar:/Users/runner/.m2/repository/io/qameta/allure/allure-model/2.13.0/allure-model-2.13.0.jar:/Users/runner/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/runner/.m2/repository/org/apache/tika/tika-core/1.20/tika-core-1.20.jar:/Users/runner/.m2/repository/org/jooq/joor-java-8/0.9.10/joor-java-8-0.9.10.jar:"/>
+    <property name="java.vm.vendor" value="Temurin"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="UTC"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework/target/surefire/surefirebooter3367599464963469327.jar /Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework/target/surefire 2021-11-11T13-57-27_554-jvmRun1 surefire8895364224934229310tmp surefire_03134714880327000510tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="surefire.test.class.path" value="/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework/target/test-classes:/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework/target/classes:/Users/runner/.m2/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar:/Users/runner/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar:/Users/runner/.m2/repository/org/testng/testng/6.14.3/testng-6.14.3.jar:/Users/runner/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/runner/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/runner/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/runner/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/runner/.m2/repository/com/google/guava/guava/28.0-jre/guava-28.0-jre.jar:/Users/runner/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/runner/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/runner/.m2/repository/org/checkerframework/checker-qual/2.8.1/checker-qual-2.8.1.jar:/Users/runner/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/Users/runner/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/runner/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/Users/runner/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/runner/.m2/repository/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar:/Users/runner/.m2/repository/io/rest-assured/rest-assured/4.4.0/rest-assured-4.4.0.jar:/Users/runner/.m2/repository/org/codehaus/groovy/groovy/3.0.8/groovy-3.0.8.jar:/Users/runner/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.8/groovy-xml-3.0.8.jar:/Users/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/runner/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/runner/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/runner/.m2/repository/io/rest-assured/json-path/4.4.0/json-path-4.4.0.jar:/Users/runner/.m2/repository/org/codehaus/groovy/groovy-json/3.0.8/groovy-json-3.0.8.jar:/Users/runner/.m2/repository/io/rest-assured/rest-assured-common/4.4.0/rest-assured-common-4.4.0.jar:/Users/runner/.m2/repository/io/rest-assured/xml-path/4.4.0/xml-path-4.4.0.jar:/Users/runner/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/runner/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/runner/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/Users/runner/.m2/repository/com/github/javafaker/javafaker/1.0.2/javafaker-1.0.2.jar:/Users/runner/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23-android.jar:/Users/runner/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/runner/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/runner/.m2/repository/io/qameta/allure/allure-testng/2.13.0/allure-testng-2.13.0.jar:/Users/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.13.0/allure-java-commons-2.13.0.jar:/Users/runner/.m2/repository/io/qameta/allure/allure-model/2.13.0/allure-model-2.13.0.jar:/Users/runner/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/runner/.m2/repository/org/apache/tika/tika-core/1.20/tika-core-1.20.jar:/Users/runner/.m2/repository/org/jooq/joor-java-8/0.9.10/joor-java-8-0.9.10.jar:"/>
+    <property name="allure.results.directory" value="target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/runner"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework/target/surefire/surefirebooter3367599464963469327.jar:/Users/runner/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar"/>
+    <property name="sun.boot.class.path" value="/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/resources.jar:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/rt.jar:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/sunrsasign.jar:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/jsse.jar:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/jce.jar:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/charsets.jar:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/jfr.jar:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="1.8.0_312-b07"/>
+    <property name="user.name" value="runner"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.15.7"/>
+    <property name="java.endorsed.dirs" value="/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/runner/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/"/>
+    <property name="java.version" value="1.8.0_312"/>
+    <property name="user.dir" value="/Users/runner/work/anji-lytweight-rest-api-framework/anji-lytweight-rest-api-framework"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/runner/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Temurin"/>
+    <property name="java.vm.version" value="25.312-b07"/>
+    <property name="java.ext.dirs" value="/Users/runner/Library/Java/Extensions:/Users/runner/hostedtoolcache/Java_Adopt_jdk/8.0.312-7/x64/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testArticleCannotBeCreatedWithoutAuthorization" classname="com.anji.test.CreateArticleTest" time="0.473">
+    <system-out><![CDATA[2021-11-11 13:57:31 INFO  AnjiRestTestSuite:65 - Starting Test Suite Execution
+Request method:	POST
+Request URI:	http://localhost:9000/api/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "user": {
+        "username": "testuserUrsula",
+        "email": "kathern.hilpert@example.com",
+        "password": "wachtwoord"
+    }
+}
+HTTP/1.1 201 Created
+Date: Thu, 11 Nov 2021 13:57:33 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 288
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "user": {
+        "email": "kathern.hilpert@example.com",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyVXJzdWxhIiwiZW1haWwiOiJrYXRoZXJuLmhpbHBlcnRAZXhhbXBsZS5jb20iLCJleHAiOjE2MzY2NzUwNTN9.3YQZdaAjGoErEGX-ouz2GngQXvGlouLTv221Nb9QU6M",
+        "username": "testuserUrsula",
+        "bio": null,
+        "image": null
+    }
+}
+2021-11-11 13:57:33 INFO  CreateArticleTest:33 - testArticleCannotBeCreatedWithoutAuthorization started
+Request method:	POST
+Request URI:	http://localhost:9000/api/articles
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "article": {
+        "title": "Sint maxime in maior",
+        "description": "Quia optio voluptatem laudantium rerum id.",
+        "body": "Aut et incidunt doloremque voluptatum nihil. Et vel doloribus autem ad quis sunt et. Sed quas ea ad quia. Quod a voluptatum id et qui. Voluptatibus alias eos iste accusantium est quia.",
+        "tagList": [
+            "Asper",
+            "Amet "
+        ],
+        "favorited": false,
+        "favoritesCount": 0
+    }
+}
+HTTP/1.1 401 Unauthorized
+Date: Thu, 11 Nov 2021 13:57:33 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 36
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "errors": {
+        "body": [
+            "Unauthorized"
+        ]
+    }
+}
+2021-11-11 13:57:34 INFO  CreateArticleTest:39 - testArticleCannotBeCreatedWithoutAuthorization success
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testCreateArticle" classname="com.anji.test.CreateArticleTest" time="1.262">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:9000/api/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "user": {
+        "username": "testuserConnie",
+        "email": "doug.bashirian@example.com",
+        "password": "wachtwoord"
+    }
+}
+HTTP/1.1 201 Created
+Date: Thu, 11 Nov 2021 13:57:34 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 286
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "user": {
+        "email": "doug.bashirian@example.com",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyQ29ubmllIiwiZW1haWwiOiJkb3VnLmJhc2hpcmlhbkBleGFtcGxlLmNvbSIsImV4cCI6MTYzNjY3NTA1NH0.uN0_vzkuOX_Z_dsKe6sDQ-_E5NQVxcI6t1ZvXc9STns",
+        "username": "testuserConnie",
+        "bio": null,
+        "image": null
+    }
+}
+2021-11-11 13:57:34 INFO  CreateArticleTest:33 - testCreateArticle started
+Request method:	GET
+Request URI:	http://localhost:9000/api/articles?author=testuserConnie
+Proxy:			<none>
+Request params:	<none>
+Query params:	author=testuserConnie
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 11 Nov 2021 13:57:34 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 33
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "articles": [
+        
+    ],
+    "articlesCount": 0
+}
+2021-11-11 13:57:34 INFO  ClientService:26 - Getting client for the user: doug.bashirian@example.com
+2021-11-11 13:57:34 INFO  ClientService:43 - Not getting user from cache
+2021-11-11 13:57:34 INFO  ClientService:47 - Login as doug.bashirian@example.com
+Request method:	POST
+Request URI:	http://localhost:9000/api/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "user": {
+        "email": "doug.bashirian@example.com",
+        "password": "wachtwoord"
+    }
+}
+HTTP/1.1 200 OK
+Date: Thu, 11 Nov 2021 13:57:34 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 284
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "user": {
+        "email": "doug.bashirian@example.com",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyQ29ubmllIiwiZW1haWwiOiJkb3VnLmJhc2hpcmlhbkBleGFtcGxlLmNvbSIsImV4cCI6MTYzNjY3NTA1NH0.uN0_vzkuOX_Z_dsKe6sDQ-_E5NQVxcI6t1ZvXc9STns",
+        "username": "testuserConnie",
+        "bio": "",
+        "image": null
+    }
+}
+2021-11-11 13:57:34 INFO  Client:49 - Login is successful for the user: doug.bashirian@example.com
+Request method:	POST
+Request URI:	http://localhost:9000/api/articles
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Token eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyQ29ubmllIiwiZW1haWwiOiJkb3VnLmJhc2hpcmlhbkBleGFtcGxlLmNvbSIsImV4cCI6MTYzNjY3NTA1NH0.uN0_vzkuOX_Z_dsKe6sDQ-_E5NQVxcI6t1ZvXc9STns
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "article": {
+        "title": "Ut molestiae molesti",
+        "description": "Consequatur ad iure repellendus consequatur voluptas dolor soluta.",
+        "body": "Dolorum qui placeat blanditiis omnis cum. Reiciendis distinctio sapiente voluptas. Et ipsa ipsam libero voluptas. Est sunt quasi. Non sed illo non laudantium aut dolorem.",
+        "tagList": [
+            "Vitae",
+            "Fugia"
+        ],
+        "favorited": false,
+        "favoritesCount": 0
+    }
+}
+HTTP/1.1 201 Created
+Date: Thu, 11 Nov 2021 13:57:34 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 559
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "article": {
+        "slug": "Ut-molestiae-molesti",
+        "title": "Ut molestiae molesti",
+        "description": "Consequatur ad iure repellendus consequatur voluptas dolor soluta.",
+        "body": "Dolorum qui placeat blanditiis omnis cum. Reiciendis distinctio sapiente voluptas. Et ipsa ipsam libero voluptas. Est sunt quasi. Non sed illo non laudantium aut dolorem.",
+        "tagList": [
+            "Vitae",
+            "Fugia"
+        ],
+        "createdAt": "2021-11-11T13:57:34.984Z",
+        "updatedAt": "2021-11-11T13:57:34.984Z",
+        "favorited": false,
+        "favoritesCount": 0,
+        "author": {
+            "username": "testuserConnie",
+            "bio": "",
+            "image": null,
+            "following": false
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:9000/api/articles?author=testuserConnie
+Proxy:			<none>
+Request params:	<none>
+Query params:	author=testuserConnie
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 11 Nov 2021 13:57:35 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 580
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "articles": [
+        {
+            "slug": "Ut-molestiae-molesti",
+            "title": "Ut molestiae molesti",
+            "description": "Consequatur ad iure repellendus consequatur voluptas dolor soluta.",
+            "body": "Dolorum qui placeat blanditiis omnis cum. Reiciendis distinctio sapiente voluptas. Et ipsa ipsam libero voluptas. Est sunt quasi. Non sed illo non laudantium aut dolorem.",
+            "tagList": [
+                "Vitae",
+                "Fugia"
+            ],
+            "createdAt": "2021-11-11T13:57:34.984Z",
+            "updatedAt": "2021-11-11T13:57:34.984Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "testuserConnie",
+                "bio": "",
+                "image": null,
+                "following": false
+            }
+        }
+    ],
+    "articlesCount": 1
+}
+2021-11-11 13:57:35 INFO  CreateArticleTest:39 - testCreateArticle success
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateArticleWithSpecialCharacters" classname="com.anji.test.CreateArticleTest" time="0.947">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:9000/api/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "user": {
+        "username": "testuserFermina",
+        "email": "cliff.romaguera@example.com",
+        "password": "wachtwoord"
+    }
+}
+HTTP/1.1 201 Created
+Date: Thu, 11 Nov 2021 13:57:35 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 291
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "user": {
+        "email": "cliff.romaguera@example.com",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyRmVybWluYSIsImVtYWlsIjoiY2xpZmYucm9tYWd1ZXJhQGV4YW1wbGUuY29tIiwiZXhwIjoxNjM2Njc1MDU1fQ.Xeb6QLNRsdqPu8f-K0FJjxJQsS1HmLEYWfeg2VagetE",
+        "username": "testuserFermina",
+        "bio": null,
+        "image": null
+    }
+}
+2021-11-11 13:57:35 INFO  CreateArticleTest:33 - testCreateArticleWithSpecialCharacters started
+Request method:	GET
+Request URI:	http://localhost:9000/api/articles?author=testuserFermina
+Proxy:			<none>
+Request params:	<none>
+Query params:	author=testuserFermina
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 11 Nov 2021 13:57:35 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 33
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "articles": [
+        
+    ],
+    "articlesCount": 0
+}
+2021-11-11 13:57:35 INFO  ClientService:26 - Getting client for the user: cliff.romaguera@example.com
+2021-11-11 13:57:35 INFO  ClientService:43 - Not getting user from cache
+2021-11-11 13:57:35 INFO  ClientService:47 - Login as cliff.romaguera@example.com
+Request method:	POST
+Request URI:	http://localhost:9000/api/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "user": {
+        "email": "cliff.romaguera@example.com",
+        "password": "wachtwoord"
+    }
+}
+HTTP/1.1 200 OK
+Date: Thu, 11 Nov 2021 13:57:35 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 289
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "user": {
+        "email": "cliff.romaguera@example.com",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyRmVybWluYSIsImVtYWlsIjoiY2xpZmYucm9tYWd1ZXJhQGV4YW1wbGUuY29tIiwiZXhwIjoxNjM2Njc1MDU2fQ.L7KTLMmHDsbOMzAnuOuc3x09rikiJS7xRvPOphtmBb0",
+        "username": "testuserFermina",
+        "bio": "",
+        "image": null
+    }
+}
+2021-11-11 13:57:36 INFO  Client:49 - Login is successful for the user: cliff.romaguera@example.com
+Request method:	POST
+Request URI:	http://localhost:9000/api/articles
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Token eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyRmVybWluYSIsImVtYWlsIjoiY2xpZmYucm9tYWd1ZXJhQGV4YW1wbGUuY29tIiwiZXhwIjoxNjM2Njc1MDU2fQ.L7KTLMmHDsbOMzAnuOuc3x09rikiJS7xRvPOphtmBb0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "article": {
+        "title": "Officiis ut nihil.Si",
+        "description": "Impedit ea nisi.",
+        "body": "Corporis eos nihil et. Non in aut non est. Et voluptatem autem id dolor id ea similique. Sit nobis quis omnis a.",
+        "tagList": [
+            "Quis ",
+            "Tempo"
+        ],
+        "favorited": false,
+        "favoritesCount": 0
+    }
+}
+HTTP/1.1 201 Created
+Date: Thu, 11 Nov 2021 13:57:36 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 452
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "article": {
+        "slug": "Officiis-ut-nihil.Si",
+        "title": "Officiis ut nihil.Si",
+        "description": "Impedit ea nisi.",
+        "body": "Corporis eos nihil et. Non in aut non est. Et voluptatem autem id dolor id ea similique. Sit nobis quis omnis a.",
+        "tagList": [
+            "Quis ",
+            "Tempo"
+        ],
+        "createdAt": "2021-11-11T13:57:36.227Z",
+        "updatedAt": "2021-11-11T13:57:36.227Z",
+        "favorited": false,
+        "favoritesCount": 0,
+        "author": {
+            "username": "testuserFermina",
+            "bio": "",
+            "image": null,
+            "following": false
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:9000/api/articles?author=testuserFermina
+Proxy:			<none>
+Request params:	<none>
+Query params:	author=testuserFermina
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 11 Nov 2021 13:57:36 GMT
+Content-Type: application/json;charset=utf-8
+access-control-allow-origin: null
+access-control-allow-headers: content-type, authorization
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, TRACE, PATCH, PURGE, HEAD
+access-control-allow-credentials: true
+Content-Length: 473
+Server: Jetty(9.4.22.v20191022)
+
+{
+    "articles": [
+        {
+            "slug": "Officiis-ut-nihil.Si",
+            "title": "Officiis ut nihil.Si",
+            "description": "Impedit ea nisi.",
+            "body": "Corporis eos nihil et. Non in aut non est. Et voluptatem autem id dolor id ea similique. Sit nobis quis omnis a.",
+            "tagList": [
+                "Quis ",
+                "Tempo"
+            ],
+            "createdAt": "2021-11-11T13:57:36.227Z",
+            "updatedAt": "2021-11-11T13:57:36.227Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "testuserFermina",
+                "bio": "",
+                "image": null,
+                "following": false
+            }
+        }
+    ],
+    "articlesCount": 1
+}
+2021-11-11 13:57:36 INFO  CreateArticleTest:39 - testCreateArticleWithSpecialCharacters success
+]]></system-out>
+  </testcase>
+</testsuite>
