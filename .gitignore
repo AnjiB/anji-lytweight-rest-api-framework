@@ -8,3 +8,7 @@
 /log/
 .allure/
 /dev_code/
+/allure-results/
+/classes/
+/maven-status/
+/surefire-reports/
