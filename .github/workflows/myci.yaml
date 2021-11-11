@@ -42,12 +42,12 @@ jobs:
       run: |
         pwd
         ls
+        cd dev_code/anji-kot-lin
+        pwd
         ./gradlew clean build
         ./gradlew run &
         sleep 30
         curl -v http://localhost:9000/
-        cd ..
-        cd ..
         pwd
         ls
     
