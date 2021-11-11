@@ -15,9 +15,6 @@ jobs:
     steps:
     - name: Pull Code
       uses: actions/checkout@v2
-      with: 
-        repository: AnjiB/anji-kot-lin
-        ref: master
     - name: Set up JDK 8
       uses: actions/setup-java@v2
       with:
@@ -28,12 +25,23 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: |
+        pwd
+        ls
+        mkdir dev_code
+        cd dev_code
+        git clone https://github.com/AnjiB/anji-kot-lin.git
+        mkdir anji-kot-lin
+        pwd
+        ls
         ./gradlew clean build
         ./gradlew run &
         sleep 30
         curl -v http://localhost:9000/
-    - name: Pull Code
-      uses: actions/checkout@v2
+        cd ..
+        cd ..
+        pwd
+        ls
+    
     - name: build-test-pro
       run: |
         pwd
