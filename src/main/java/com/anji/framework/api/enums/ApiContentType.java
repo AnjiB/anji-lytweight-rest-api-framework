@@ -8,7 +8,7 @@ package com.anji.framework.api.enums;
  */
 public enum ApiContentType {
 
-	JSON("application/json;charset=utf-8"),
+	JSON("application/json"),
 	XML("application/xml");
 	
 	private String contentType;
