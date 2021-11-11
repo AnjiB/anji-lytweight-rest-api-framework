@@ -44,7 +44,7 @@ public class CreateArticleTest {
 
 	}
 
-	@Test(dataProvider = "invalid-article-data-provider", dataProviderClass = InvalidTestDataProvider.class)
+	//@Test(dataProvider = "invalid-article-data-provider", dataProviderClass = InvalidTestDataProvider.class)
 	public void createArticleWithEmptiesAndNulls(ArticleRequestAndResponse invalidArticleTestDataObject)
 			throws Exception {
 
