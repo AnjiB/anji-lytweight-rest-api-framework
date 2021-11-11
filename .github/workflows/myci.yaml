@@ -18,12 +18,14 @@ jobs:
       with: 
         repository: AnjiB/anji-kot-lin
         ref: master
-    - name: Set up JDK 11
+    - name: Set up JDK 8
       uses: actions/setup-java@v2
       with:
-        java-version: '11'
+        java-version: '8'
         distribution: 'adopt'
-        cache: gradle
+        cache: |
+          maven
+          gradle
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
@@ -34,12 +36,14 @@ jobs:
         curl -v http://localhost:9000/
     - name: Pull Code
       uses: actions/checkout@v2
-    - name: test
+    - name: test-e2e
       run: |
         pwd
         ls
-        mvn test -Pe2e -DautEnvironment=QA -DenableLogs=true
+        curl -v http://localhost:9000/
+        mvn clean install -DskipTests
         ls
+      
       
     
   
