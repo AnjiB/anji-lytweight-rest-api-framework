@@ -81,6 +81,11 @@ jobs:
         name: target
     - name: Publish Allure Reports
       run: |
+        git pull
+        if [ -d "docs" ]; then
+          # Take action if $DIR exists. #
+          rm -rf docs
+        fi
         mkdir docs
         ls
         mv site/allure-maven-plugin/* docs
