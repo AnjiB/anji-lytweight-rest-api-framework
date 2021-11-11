@@ -9,7 +9,6 @@ Thanks you providing me an opportunity to work on this assignment. I built a Res
 * [How to run the tests](#how-to-run-the-tests)
 * [Continuous Integration](#Continuous-Integration)
 * [Reporting](#reporting)
-* [Next Stpes](#next_steps)
 
 ## Setup AUT
 Refer this [ReadME](https://github.com/AnjiB/anji-kot-lin/blob/master/README.md) to setup the application to test the APIs.
@@ -47,11 +46,12 @@ Framework is built on Java and below are the requirements to run the tests
 
 ## Continuous integration
 * [Jenkins](https://github.com/AnjiB/anji-lytweight-rest-api-framework/blob/master/Jekinsfile)
-* GitLab (TODO)
+* Github Actions: 
+  * Code is intergrated with Github actions
+  * When the merge request is created or pushed code to master, it set up the dev environment (APIs will be available to hit) and tests run against them
+  * Allure reports will be created and published to github pages [here](https://anjib.github.io/anji-lytweight-rest-api-framework/)
 
 ## Reporting
 * Once the you run the tests, under root folder, you will see a folder with name `target/surefire-reports` will be generated.
 In the folder `surefire-reports` you will see emailable-report.html and index.html which tells you about the overall test run status.
-
-## Next Steps
-* Github workflow
+* Allure reports will be generated and published to github pages.
