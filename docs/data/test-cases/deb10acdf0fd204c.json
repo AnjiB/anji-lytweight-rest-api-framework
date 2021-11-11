@@ -1,12 +1,12 @@
 {
-  "uid" : "9dd8f9d459f8be31",
+  "uid" : "deb10acdf0fd204c",
   "name" : "Testing if valid user can create the article or not with special characters",
   "fullName" : "com.anji.test.CreateArticleTest.testCreateArticleWithSpecialCharacters",
   "historyId" : "23f8a41e400d8aaae61c551e17ca21a3",
   "time" : {
-    "start" : 1636639055731,
-    "stop" : 1636639056675,
-    "duration" : 944
+    "start" : 1636640037292,
+    "stop" : 1636640038237,
+    "duration" : 945
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "registerUser",
     "time" : {
-      "start" : 1636639055490,
-      "stop" : 1636639055729,
-      "duration" : 239
+      "start" : 1636640037049,
+      "stop" : 1636640037289,
+      "duration" : 240
     },
     "description" : "",
     "status" : "passed",
@@ -49,10 +49,10 @@
     "value" : "com.anji.test.CreateArticleTest"
   }, {
     "name" : "host",
-    "value" : "Mac-1636637549507.local"
+    "value" : "Mac-1636639193755.local"
   }, {
     "name" : "thread",
-    "value" : "6007@Mac-1636637549507.local.TestNG-test=AnjiRestTest-1(11)"
+    "value" : "5422@Mac-1636639193755.local.TestNG-test=AnjiRestTest-1(11)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "9dd8f9d459f8be31.json",
+  "source" : "deb10acdf0fd204c.json",
   "parameterValues" : [ ]
 }

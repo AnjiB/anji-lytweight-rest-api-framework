@@ -1,30 +1,30 @@
 [ {
-  "uid" : "9dd8f9d459f8be31",
-  "name" : "Testing if valid user can create the article or not with special characters",
-  "time" : {
-    "start" : 1636639055731,
-    "stop" : 1636639056675,
-    "duration" : 944
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c19244b363821abc",
+  "uid" : "aaa72b88c1244337",
   "name" : "Testing if valid user can create the article or not",
   "time" : {
-    "start" : 1636639054231,
-    "stop" : 1636639055488,
-    "duration" : 1257
+    "start" : 1636640035665,
+    "stop" : 1636640037044,
+    "duration" : 1379
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "d20435268a7249dd",
+  "uid" : "bb1a67589a0ef31d",
   "name" : "Testing if user can create the article without token or not",
   "time" : {
-    "start" : 1636639053730,
-    "stop" : 1636639054164,
-    "duration" : 434
+    "start" : 1636640035108,
+    "stop" : 1636640035603,
+    "duration" : 495
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "deb10acdf0fd204c",
+  "name" : "Testing if valid user can create the article or not with special characters",
+  "time" : {
+    "start" : 1636640037292,
+    "stop" : 1636640038237,
+    "duration" : 945
   },
   "status" : "passed",
   "severity" : "normal"

@@ -8,39 +8,39 @@
         "name" : "com.anji.test.CreateArticleTest",
         "children" : [ {
           "name" : "Testing if user can create the article without token or not",
-          "uid" : "d20435268a7249dd",
+          "uid" : "bb1a67589a0ef31d",
           "parentUid" : "2c4e6d9b97dce82b5b4a6994ca161d3d",
           "status" : "passed",
           "time" : {
-            "start" : 1636639053730,
-            "stop" : 1636639054164,
-            "duration" : 434
+            "start" : 1636640035108,
+            "stop" : 1636640035603,
+            "duration" : 495
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Testing if valid user can create the article or not",
-          "uid" : "c19244b363821abc",
+          "uid" : "aaa72b88c1244337",
           "parentUid" : "2c4e6d9b97dce82b5b4a6994ca161d3d",
           "status" : "passed",
           "time" : {
-            "start" : 1636639054231,
-            "stop" : 1636639055488,
-            "duration" : 1257
+            "start" : 1636640035665,
+            "stop" : 1636640037044,
+            "duration" : 1379
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Testing if valid user can create the article or not with special characters",
-          "uid" : "9dd8f9d459f8be31",
+          "uid" : "deb10acdf0fd204c",
           "parentUid" : "2c4e6d9b97dce82b5b4a6994ca161d3d",
           "status" : "passed",
           "time" : {
-            "start" : 1636639055731,
-            "stop" : 1636639056675,
-            "duration" : 944
+            "start" : 1636640037292,
+            "stop" : 1636640038237,
+            "duration" : 945
           },
           "flaky" : false,
           "newFailed" : false,

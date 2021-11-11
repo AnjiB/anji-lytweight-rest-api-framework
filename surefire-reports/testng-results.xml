@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="AnjiRestTestSuite" duration-ms="5490" started-at="2021-11-11T13:57:31Z" finished-at="2021-11-11T13:57:36Z">
+  <suite name="AnjiRestTestSuite" duration-ms="7247" started-at="2021-11-11T14:13:50Z" finished-at="2021-11-11T14:13:58Z">
     <groups>
     </groups>
-    <test name="AnjiRestTest" duration-ms="5490" started-at="2021-11-11T13:57:31Z" finished-at="2021-11-11T13:57:36Z">
+    <test name="AnjiRestTest" duration-ms="7247" started-at="2021-11-11T14:13:50Z" finished-at="2021-11-11T14:13:58Z">
       <class name="com.anji.test.CreateArticleTest">
-        <test-method status="PASS" signature="registerUser()[pri:0, instance:com.anji.test.CreateArticleTest@7899de11]" name="registerUser" is-config="true" duration-ms="2416" started-at="2021-11-11T13:57:31Z" finished-at="2021-11-11T13:57:33Z">
+        <test-method status="PASS" signature="registerUser()[pri:0, instance:com.anji.test.CreateArticleTest@6726cc69]" name="registerUser" is-config="true" duration-ms="3876" started-at="2021-11-11T14:13:51Z" finished-at="2021-11-11T14:13:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerUser -->
-        <test-method status="PASS" signature="testArticleCannotBeCreatedWithoutAuthorization()[pri:0, instance:com.anji.test.CreateArticleTest@7899de11]" name="testArticleCannotBeCreatedWithoutAuthorization" duration-ms="472" started-at="2021-11-11T13:57:33Z" description="Testing if user can create the article without token or not" finished-at="2021-11-11T13:57:34Z">
+        <test-method status="PASS" signature="testArticleCannotBeCreatedWithoutAuthorization()[pri:0, instance:com.anji.test.CreateArticleTest@6726cc69]" name="testArticleCannotBeCreatedWithoutAuthorization" duration-ms="562" started-at="2021-11-11T14:13:55Z" description="Testing if user can create the article without token or not" finished-at="2021-11-11T14:13:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArticleCannotBeCreatedWithoutAuthorization -->
-        <test-method status="PASS" signature="registerUser()[pri:0, instance:com.anji.test.CreateArticleTest@7899de11]" name="registerUser" is-config="true" duration-ms="52" started-at="2021-11-11T13:57:34Z" finished-at="2021-11-11T13:57:34Z">
+        <test-method status="PASS" signature="registerUser()[pri:0, instance:com.anji.test.CreateArticleTest@6726cc69]" name="registerUser" is-config="true" duration-ms="46" started-at="2021-11-11T14:13:55Z" finished-at="2021-11-11T14:13:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerUser -->
-        <test-method status="PASS" signature="testCreateArticle()[pri:0, instance:com.anji.test.CreateArticleTest@7899de11]" name="testCreateArticle" duration-ms="1260" started-at="2021-11-11T13:57:34Z" description="Testing if valid user can create the article or not" finished-at="2021-11-11T13:57:35Z">
+        <test-method status="PASS" signature="testCreateArticle()[pri:0, instance:com.anji.test.CreateArticleTest@6726cc69]" name="testCreateArticle" duration-ms="1383" started-at="2021-11-11T14:13:55Z" description="Testing if valid user can create the article or not" finished-at="2021-11-11T14:13:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateArticle -->
-        <test-method status="PASS" signature="registerUser()[pri:0, instance:com.anji.test.CreateArticleTest@7899de11]" name="registerUser" is-config="true" duration-ms="239" started-at="2021-11-11T13:57:35Z" finished-at="2021-11-11T13:57:35Z">
+        <test-method status="PASS" signature="registerUser()[pri:0, instance:com.anji.test.CreateArticleTest@6726cc69]" name="registerUser" is-config="true" duration-ms="241" started-at="2021-11-11T14:13:57Z" finished-at="2021-11-11T14:13:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerUser -->
-        <test-method status="PASS" signature="testCreateArticleWithSpecialCharacters()[pri:0, instance:com.anji.test.CreateArticleTest@7899de11]" name="testCreateArticleWithSpecialCharacters" duration-ms="944" started-at="2021-11-11T13:57:35Z" description="Testing if valid user can create the article or not with special characters" finished-at="2021-11-11T13:57:36Z">
+        <test-method status="PASS" signature="testCreateArticleWithSpecialCharacters()[pri:0, instance:com.anji.test.CreateArticleTest@6726cc69]" name="testCreateArticleWithSpecialCharacters" duration-ms="947" started-at="2021-11-11T14:13:57Z" description="Testing if valid user can create the article or not with special characters" finished-at="2021-11-11T14:13:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateArticleWithSpecialCharacters -->
