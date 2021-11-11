@@ -36,6 +36,7 @@ jobs:
       run: |
        pwd
        ls
+       cd dev_code/anji-kot-lin
        chmod +x gradlew
     - name: Build with Gradle
       run: |
