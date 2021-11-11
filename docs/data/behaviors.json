@@ -1,0 +1,44 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Testing if user can create the article without token or not",
+    "uid" : "5e2931fd10be8cc0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1636643216279,
+      "stop" : 1636643216886,
+      "duration" : 607
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Testing if valid user can create the article or not",
+    "uid" : "4270f9a9f4354da1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1636643217031,
+      "stop" : 1636643218723,
+      "duration" : 1692
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Testing if valid user can create the article or not with special characters",
+    "uid" : "1439e5eea07b5fff",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1636643219098,
+      "stop" : 1636643220222,
+      "duration" : 1124
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "behaviors"
+}

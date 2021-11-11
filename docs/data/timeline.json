@@ -1,0 +1,52 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "Mac-1636642835088.local",
+    "children" : [ {
+      "name" : "6617@Mac-1636642835088.local.TestNG-test=AnjiRestTest-1(11)",
+      "children" : [ {
+        "name" : "Testing if user can create the article without token or not",
+        "uid" : "5e2931fd10be8cc0",
+        "parentUid" : "cb9f283d480bdc627087dbe7164730d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636643216279,
+          "stop" : 1636643216886,
+          "duration" : 607
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Testing if valid user can create the article or not with special characters",
+        "uid" : "1439e5eea07b5fff",
+        "parentUid" : "cb9f283d480bdc627087dbe7164730d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636643219098,
+          "stop" : 1636643220222,
+          "duration" : 1124
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Testing if valid user can create the article or not",
+        "uid" : "4270f9a9f4354da1",
+        "parentUid" : "cb9f283d480bdc627087dbe7164730d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636643217031,
+          "stop" : 1636643218723,
+          "duration" : 1692
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cb9f283d480bdc627087dbe7164730d1"
+    } ],
+    "uid" : "2bebb4abb1ac3bfddb090f46b7a84475"
+  } ],
+  "name" : "timeline"
+}
