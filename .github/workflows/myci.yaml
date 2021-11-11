@@ -56,8 +56,11 @@ jobs:
         curl -v http://localhost:9000/
     - name: test
       run: |
+        rm -rf docs
+        git add -A
+        git commit -m "Cleaning up allure reports"
+        git push
         mvn test -Pe2e -DautEnvironment=QA -DenableLogs=true
-        ls
     - name: Generating Allure Reports
       run: |
         mvn allure:report
@@ -78,8 +81,6 @@ jobs:
         name: target
     - name: Publish Allure Reports
       run: |
-        git pull
-        rm -rf docs
         mkdir docs
         ls
         mv site/allure-maven-plugin/* docs
