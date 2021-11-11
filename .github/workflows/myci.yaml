@@ -1,7 +1,4 @@
-# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
-
-name: Java CI with Gradle
+name: Java CI with Maven
 
 on:
   push:
@@ -10,22 +7,36 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-test-project:
     runs-on: macos-10.15
     steps:
-    - name: Pull Code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - name: Set up JDK 8
+      uses: actions/setup-java@v2
+      with:
+        java-version: '8'
+        distribution: 'adopt'
+        cache: maven
+    - name: Build with Maven
+      run: mvn clean install -DskipTests
+    - name: Cache Maven repository
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+          
+  run-e2e-tests:
+    needs: build-test-project
+    runs-on: macos-10.15
+    steps:
+    - uses: actions/checkout@v2
     - name: Pull Dev Code
       run: |
-        pwd
-        ls
         mkdir dev_code
         cd dev_code
         git clone https://github.com/AnjiB/anji-kot-lin.git
-        cd anji-kot-lin
-        pwd
-        ls
-        
     - name: Set up JDK 8
       uses: actions/setup-java@v2
       with:
@@ -34,41 +45,43 @@ jobs:
         cache: gradle
     - name: Grant execute permission for gradlew
       run: |
-       pwd
-       ls
        cd dev_code/anji-kot-lin
        chmod +x gradlew
-    - name: Build with Gradle
+    - name: Spinup Environment
       run: |
-        pwd
-        ls
         cd dev_code/anji-kot-lin
-        pwd
         ./gradlew clean build
         ./gradlew run &
         sleep 30
         curl -v http://localhost:9000/
-        pwd
-        ls
-    
-    - name: build-test-pro
-      run: |
-        pwd
-        ls
-        curl -v http://localhost:9000/
-        mvn clean install -DskipTests
-        ls
-    - name: Cache Maven repository
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
     - name: test
       run: |
         mvn test -Pe2e -DautEnvironment=QA -DenableLogs=true
         ls
-      
-    
-  
+    - name: Generating Allure Reports
+      run: |
+        mvn allure:report
+    - name: Upload target folder to publish results
+      uses: actions/upload-artifact@v2
+      with:
+        name: target
+        path: ./target/
+ 
+  publish-results:
+    needs: run-e2e-tests
+    runs-on: macos-10.15
+    steps:
+    - uses: actions/checkout@v2
+    - name: Download target folder
+      uses: actions/download-artifact@v2
+      with:
+        name: target
+    - name: Publish Allure Reports
+      run: |
+        rm -rf docs
+        mkdir docs
+        ls
+        mv site/allure-maven-plugin/* docs
+        git add -A
+        git commit -m "Publishing allure reports"
+        git push
