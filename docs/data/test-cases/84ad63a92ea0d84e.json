@@ -1,0 +1,81 @@
+{
+  "uid" : "84ad63a92ea0d84e",
+  "name" : "createArticleWithEmptiesAndNulls",
+  "fullName" : "com.anji.test.CreateArticleTest.createArticleWithEmptiesAndNulls",
+  "historyId" : "fec17c5da25d3c8e1d0c05ee000291d8",
+  "time" : {
+    "start" : 1636581390277,
+    "stop" : 1636581390671,
+    "duration" : 394
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "registerUser",
+    "time" : {
+      "start" : 1636581388590,
+      "stop" : 1636581390209,
+      "duration" : 1619
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.anji.test.CreateArticleTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.anji.test.CreateArticleTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "createArticleWithEmptiesAndNulls"
+  }, {
+    "name" : "parentSuite",
+    "value" : "AnjiRestTestSuite"
+  }, {
+    "name" : "suite",
+    "value" : "AnjiRestTest"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.anji.test.CreateArticleTest"
+  }, {
+    "name" : "host",
+    "value" : "Anjis-MBP.home"
+  }, {
+    "name" : "thread",
+    "value" : "27306@Anjis-MBP.home.TestNG-test=AnjiRestTest-1(13)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "com.anji.rest.api.pojo.ArticleRequestAndResponse@1d97cbdd"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "84ad63a92ea0d84e.json",
+  "parameterValues" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@1d97cbdd" ]
+}

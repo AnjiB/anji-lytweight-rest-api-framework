@@ -1,0 +1,78 @@
+{
+  "uid" : "5f78c0d4b86443c7",
+  "name" : "Testing if valid user can create the article or not",
+  "fullName" : "com.anji.test.CreateArticleTest.testCreateArticle",
+  "historyId" : "7cc0d199bb404ec7301d1623e20fd712",
+  "time" : {
+    "start" : 1636581390769,
+    "stop" : 1636581390944,
+    "duration" : 175
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "registerUser",
+    "time" : {
+      "start" : 1636581390741,
+      "stop" : 1636581390767,
+      "duration" : 26
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.anji.test.CreateArticleTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.anji.test.CreateArticleTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCreateArticle"
+  }, {
+    "name" : "parentSuite",
+    "value" : "AnjiRestTestSuite"
+  }, {
+    "name" : "suite",
+    "value" : "AnjiRestTest"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.anji.test.CreateArticleTest"
+  }, {
+    "name" : "host",
+    "value" : "Anjis-MBP.home"
+  }, {
+    "name" : "thread",
+    "value" : "27306@Anjis-MBP.home.TestNG-test=AnjiRestTest-1(13)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5f78c0d4b86443c7.json",
+  "parameterValues" : [ ]
+}
