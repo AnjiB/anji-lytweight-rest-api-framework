@@ -78,6 +78,7 @@ jobs:
         name: target
     - name: Publish Allure Reports
       run: |
+        git pull
         rm -rf docs
         mkdir docs
         ls
