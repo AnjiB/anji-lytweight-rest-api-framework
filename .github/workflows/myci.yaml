@@ -61,6 +61,7 @@ jobs:
         git commit -m "Cleaning up allure reports"
         git push
         mvn test -Pe2e -DautEnvironment=QA -DenableLogs=true
+      continue-on-error: true
     - name: Generating Allure Reports
       run: |
         mvn allure:report
