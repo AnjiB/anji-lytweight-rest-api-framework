@@ -1,0 +1,65 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "Mac-1636909022816.local",
+    "children" : [ {
+      "name" : "7717@Mac-1636909022816.local.TestNG-test=AnjiRestTest-1(11)",
+      "children" : [ {
+        "name" : "createArticleWithEmptiesAndNulls",
+        "uid" : "92e560d89fcfbd84",
+        "parentUid" : "393b993129ae954ed0f25ac6b1f88cce",
+        "status" : "broken",
+        "time" : {
+          "start" : 1636912734807,
+          "stop" : 1636912735592,
+          "duration" : 785
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@67561d15" ]
+      }, {
+        "name" : "Testing if valid user can create the article or not with special characters",
+        "uid" : "e6d614f29f8af903",
+        "parentUid" : "393b993129ae954ed0f25ac6b1f88cce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636912737468,
+          "stop" : 1636912738399,
+          "duration" : 931
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Testing if user can create the article without token or not",
+        "uid" : "dcd10274a66b9eb3",
+        "parentUid" : "393b993129ae954ed0f25ac6b1f88cce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636912735841,
+          "stop" : 1636912735894,
+          "duration" : 53
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Testing if valid user can create the article or not",
+        "uid" : "7f423af65068457b",
+        "parentUid" : "393b993129ae954ed0f25ac6b1f88cce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636912736134,
+          "stop" : 1636912737238,
+          "duration" : 1104
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "393b993129ae954ed0f25ac6b1f88cce"
+    } ],
+    "uid" : "bb5f0cf2d4cf6dcc562e6032a5eea53d"
+  } ],
+  "name" : "timeline"
+}

@@ -1,0 +1,41 @@
+[ {
+  "uid" : "dcd10274a66b9eb3",
+  "name" : "Testing if user can create the article without token or not",
+  "time" : {
+    "start" : 1636912735841,
+    "stop" : 1636912735894,
+    "duration" : 53
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f423af65068457b",
+  "name" : "Testing if valid user can create the article or not",
+  "time" : {
+    "start" : 1636912736134,
+    "stop" : 1636912737238,
+    "duration" : 1104
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "92e560d89fcfbd84",
+  "name" : "createArticleWithEmptiesAndNulls",
+  "time" : {
+    "start" : 1636912734807,
+    "stop" : 1636912735592,
+    "duration" : 785
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e6d614f29f8af903",
+  "name" : "Testing if valid user can create the article or not with special characters",
+  "time" : {
+    "start" : 1636912737468,
+    "stop" : 1636912738399,
+    "duration" : 931
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "com.anji.test.CreateArticleTest",
+    "children" : [ {
+      "name" : "createArticleWithEmptiesAndNulls",
+      "uid" : "92e560d89fcfbd84",
+      "parentUid" : "95ff698462e2de5b21975047c60fb11e",
+      "status" : "broken",
+      "time" : {
+        "start" : 1636912734807,
+        "stop" : 1636912735592,
+        "duration" : 785
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@67561d15" ]
+    }, {
+      "name" : "testArticleCannotBeCreatedWithoutAuthorization",
+      "uid" : "dcd10274a66b9eb3",
+      "parentUid" : "95ff698462e2de5b21975047c60fb11e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636912735841,
+        "stop" : 1636912735894,
+        "duration" : 53
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateArticle",
+      "uid" : "7f423af65068457b",
+      "parentUid" : "95ff698462e2de5b21975047c60fb11e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636912736134,
+        "stop" : 1636912737238,
+        "duration" : 1104
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateArticleWithSpecialCharacters",
+      "uid" : "e6d614f29f8af903",
+      "parentUid" : "95ff698462e2de5b21975047c60fb11e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1636912737468,
+        "stop" : 1636912738399,
+        "duration" : 931
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "com.anji.test.CreateArticleTest"
+  } ],
+  "name" : "packages"
+}
