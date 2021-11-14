@@ -56,8 +56,11 @@ jobs:
         curl -v http://localhost:9000/
     - name: test
       run: |
-        rm -rf docs
-        git add -A
+        if [ -d "docs" ]; then
+          # Take action if $DIR exists. #
+          rm -rf docs
+        fi
+        git add docs
         git commit -m "Cleaning up allure reports"
         git push
         mvn test -Pe2e -DautEnvironment=QA -DenableLogs=true
@@ -90,6 +93,6 @@ jobs:
         mkdir docs
         ls
         mv site/allure-maven-plugin/* docs
-        git add -A
+        git add docs
         git commit -m "Publishing allure reports"
         git push
