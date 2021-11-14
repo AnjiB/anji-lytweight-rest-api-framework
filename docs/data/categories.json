@@ -6,17 +6,17 @@
       "name" : "java.lang.NullPointerException",
       "children" : [ {
         "name" : "createArticleWithEmptiesAndNulls",
-        "uid" : "92e560d89fcfbd84",
+        "uid" : "5c5a8507f0e29b04",
         "parentUid" : "5592898b36d684905e31486a23088bda",
         "status" : "broken",
         "time" : {
-          "start" : 1636912734807,
-          "stop" : 1636912735592,
-          "duration" : 785
+          "start" : 1636913624103,
+          "stop" : 1636913624850,
+          "duration" : 747
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@67561d15" ]
+        "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@6850b243" ]
       } ],
       "uid" : "5592898b36d684905e31486a23088bda"
     } ],

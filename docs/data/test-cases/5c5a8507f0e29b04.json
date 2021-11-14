@@ -1,12 +1,12 @@
 {
-  "uid" : "92e560d89fcfbd84",
+  "uid" : "5c5a8507f0e29b04",
   "name" : "createArticleWithEmptiesAndNulls",
   "fullName" : "com.anji.test.CreateArticleTest.createArticleWithEmptiesAndNulls",
-  "historyId" : "75fd3353055897d075176a742307f213",
+  "historyId" : "1b3b5c87acc76660e6fa09835aa3883f",
   "time" : {
-    "start" : 1636912734807,
-    "stop" : 1636912735592,
-    "duration" : 785
+    "start" : 1636913624103,
+    "stop" : 1636913624850,
+    "duration" : 747
   },
   "status" : "broken",
   "statusMessage" : "java.lang.NullPointerException",
@@ -16,9 +16,9 @@
   "beforeStages" : [ {
     "name" : "registerUser",
     "time" : {
-      "start" : 1636912732517,
-      "stop" : 1636912734741,
-      "duration" : 2224
+      "start" : 1636913621894,
+      "stop" : 1636913624042,
+      "duration" : 2148
     },
     "description" : "",
     "status" : "passed",
@@ -51,10 +51,10 @@
     "value" : "com.anji.test.CreateArticleTest"
   }, {
     "name" : "host",
-    "value" : "Mac-1636909022816.local"
+    "value" : "Mac-1636910498171.local"
   }, {
     "name" : "thread",
-    "value" : "7717@Mac-1636909022816.local.TestNG-test=AnjiRestTest-1(11)"
+    "value" : "7113@Mac-1636910498171.local.TestNG-test=AnjiRestTest-1(11)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -67,7 +67,7 @@
   } ],
   "parameters" : [ {
     "name" : "arg0",
-    "value" : "com.anji.rest.api.pojo.ArticleRequestAndResponse@67561d15"
+    "value" : "com.anji.rest.api.pojo.ArticleRequestAndResponse@6850b243"
   } ],
   "links" : [ ],
   "hidden" : false,
@@ -82,6 +82,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "92e560d89fcfbd84.json",
-  "parameterValues" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@67561d15" ]
+  "source" : "5c5a8507f0e29b04.json",
+  "parameterValues" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@6850b243" ]
 }

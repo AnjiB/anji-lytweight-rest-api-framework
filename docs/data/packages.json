@@ -4,52 +4,52 @@
     "name" : "com.anji.test.CreateArticleTest",
     "children" : [ {
       "name" : "createArticleWithEmptiesAndNulls",
-      "uid" : "92e560d89fcfbd84",
+      "uid" : "5c5a8507f0e29b04",
       "parentUid" : "95ff698462e2de5b21975047c60fb11e",
       "status" : "broken",
       "time" : {
-        "start" : 1636912734807,
-        "stop" : 1636912735592,
-        "duration" : 785
+        "start" : 1636913624103,
+        "stop" : 1636913624850,
+        "duration" : 747
       },
       "flaky" : false,
       "newFailed" : false,
-      "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@67561d15" ]
+      "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@6850b243" ]
     }, {
       "name" : "testArticleCannotBeCreatedWithoutAuthorization",
-      "uid" : "dcd10274a66b9eb3",
+      "uid" : "52c7f2653267db5a",
       "parentUid" : "95ff698462e2de5b21975047c60fb11e",
       "status" : "passed",
       "time" : {
-        "start" : 1636912735841,
-        "stop" : 1636912735894,
-        "duration" : 53
+        "start" : 1636913625094,
+        "stop" : 1636913625146,
+        "duration" : 52
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "testCreateArticle",
-      "uid" : "7f423af65068457b",
+      "uid" : "1ccc153ddb2d9d88",
       "parentUid" : "95ff698462e2de5b21975047c60fb11e",
       "status" : "passed",
       "time" : {
-        "start" : 1636912736134,
-        "stop" : 1636912737238,
-        "duration" : 1104
+        "start" : 1636913625385,
+        "stop" : 1636913626454,
+        "duration" : 1069
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "testCreateArticleWithSpecialCharacters",
-      "uid" : "e6d614f29f8af903",
+      "uid" : "321911975c6b3069",
       "parentUid" : "95ff698462e2de5b21975047c60fb11e",
       "status" : "passed",
       "time" : {
-        "start" : 1636912737468,
-        "stop" : 1636912738399,
-        "duration" : 931
+        "start" : 1636913626684,
+        "stop" : 1636913628562,
+        "duration" : 1878
       },
       "flaky" : false,
       "newFailed" : false,
