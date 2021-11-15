@@ -1,12 +1,12 @@
 {
-  "uid" : "52c7f2653267db5a",
-  "name" : "Testing if user can create the article without token or not",
-  "fullName" : "com.anji.test.CreateArticleTest.testArticleCannotBeCreatedWithoutAuthorization",
-  "historyId" : "bf013c477e726667a04e98c07acbd0ea",
+  "uid" : "9cabfdc5986ed0d1",
+  "name" : "Testing if valid user can create the article or not with special characters",
+  "fullName" : "com.anji.test.CreateArticleTest.testCreateArticleWithSpecialCharacters",
+  "historyId" : "23f8a41e400d8aaae61c551e17ca21a3",
   "time" : {
-    "start" : 1636913625094,
-    "stop" : 1636913625146,
-    "duration" : 52
+    "start" : 1637014178902,
+    "stop" : 1637014179839,
+    "duration" : 937
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "registerUser",
     "time" : {
-      "start" : 1636913624859,
-      "stop" : 1636913625092,
+      "start" : 1637014178667,
+      "stop" : 1637014178900,
       "duration" : 233
     },
     "description" : "",
@@ -37,7 +37,7 @@
     "value" : "com.anji.test.CreateArticleTest"
   }, {
     "name" : "testMethod",
-    "value" : "testArticleCannotBeCreatedWithoutAuthorization"
+    "value" : "testCreateArticleWithSpecialCharacters"
   }, {
     "name" : "parentSuite",
     "value" : "AnjiRestTestSuite"
@@ -49,10 +49,10 @@
     "value" : "com.anji.test.CreateArticleTest"
   }, {
     "name" : "host",
-    "value" : "Mac-1636910498171.local"
+    "value" : "Mac-1637010814849.local"
   }, {
     "name" : "thread",
-    "value" : "7113@Mac-1636910498171.local.TestNG-test=AnjiRestTest-1(11)"
+    "value" : "5165@Mac-1637010814849.local.TestNG-test=AnjiRestTest-1(11)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "52c7f2653267db5a.json",
+  "source" : "9cabfdc5986ed0d1.json",
   "parameterValues" : [ ]
 }

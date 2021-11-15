@@ -1,41 +1,41 @@
 [ {
-  "uid" : "1ccc153ddb2d9d88",
-  "name" : "Testing if valid user can create the article or not",
-  "time" : {
-    "start" : 1636913625385,
-    "stop" : 1636913626454,
-    "duration" : 1069
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "52c7f2653267db5a",
+  "uid" : "795c3840948ddd50",
   "name" : "Testing if user can create the article without token or not",
   "time" : {
-    "start" : 1636913625094,
-    "stop" : 1636913625146,
-    "duration" : 52
+    "start" : 1637014177249,
+    "stop" : 1637014177316,
+    "duration" : 67
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "321911975c6b3069",
-  "name" : "Testing if valid user can create the article or not with special characters",
+  "uid" : "8978a47d4902cbcb",
+  "name" : "Testing if valid user can create the article or not",
   "time" : {
-    "start" : 1636913626684,
-    "stop" : 1636913628562,
-    "duration" : 1878
+    "start" : 1637014177564,
+    "stop" : 1637014178665,
+    "duration" : 1101
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5c5a8507f0e29b04",
+  "uid" : "2f3ca86b934ad283",
   "name" : "createArticleWithEmptiesAndNulls",
   "time" : {
-    "start" : 1636913624103,
-    "stop" : 1636913624850,
-    "duration" : 747
+    "start" : 1637014176172,
+    "stop" : 1637014176997,
+    "duration" : 825
   },
   "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9cabfdc5986ed0d1",
+  "name" : "Testing if valid user can create the article or not with special characters",
+  "time" : {
+    "start" : 1637014178902,
+    "stop" : 1637014179839,
+    "duration" : 937
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]

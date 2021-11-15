@@ -1,65 +1,65 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "Mac-1636910498171.local",
+    "name" : "Mac-1637010814849.local",
     "children" : [ {
-      "name" : "7113@Mac-1636910498171.local.TestNG-test=AnjiRestTest-1(11)",
+      "name" : "5165@Mac-1637010814849.local.TestNG-test=AnjiRestTest-1(11)",
       "children" : [ {
-        "name" : "Testing if user can create the article without token or not",
-        "uid" : "52c7f2653267db5a",
-        "parentUid" : "2a4395458f1fd494e4b19f2c12497076",
+        "name" : "createArticleWithEmptiesAndNulls",
+        "uid" : "2f3ca86b934ad283",
+        "parentUid" : "0ba9e4414856e5cb6ede56e11205636d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1637014176172,
+          "stop" : 1637014176997,
+          "duration" : 825
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@3ffd0db5" ]
+      }, {
+        "name" : "Testing if valid user can create the article or not with special characters",
+        "uid" : "9cabfdc5986ed0d1",
+        "parentUid" : "0ba9e4414856e5cb6ede56e11205636d",
         "status" : "passed",
         "time" : {
-          "start" : 1636913625094,
-          "stop" : 1636913625146,
-          "duration" : 52
+          "start" : 1637014178902,
+          "stop" : 1637014179839,
+          "duration" : 937
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Testing if user can create the article without token or not",
+        "uid" : "795c3840948ddd50",
+        "parentUid" : "0ba9e4414856e5cb6ede56e11205636d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637014177249,
+          "stop" : 1637014177316,
+          "duration" : 67
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Testing if valid user can create the article or not",
-        "uid" : "1ccc153ddb2d9d88",
-        "parentUid" : "2a4395458f1fd494e4b19f2c12497076",
+        "uid" : "8978a47d4902cbcb",
+        "parentUid" : "0ba9e4414856e5cb6ede56e11205636d",
         "status" : "passed",
         "time" : {
-          "start" : 1636913625385,
-          "stop" : 1636913626454,
-          "duration" : 1069
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "createArticleWithEmptiesAndNulls",
-        "uid" : "5c5a8507f0e29b04",
-        "parentUid" : "2a4395458f1fd494e4b19f2c12497076",
-        "status" : "broken",
-        "time" : {
-          "start" : 1636913624103,
-          "stop" : 1636913624850,
-          "duration" : 747
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "com.anji.rest.api.pojo.ArticleRequestAndResponse@6850b243" ]
-      }, {
-        "name" : "Testing if valid user can create the article or not with special characters",
-        "uid" : "321911975c6b3069",
-        "parentUid" : "2a4395458f1fd494e4b19f2c12497076",
-        "status" : "passed",
-        "time" : {
-          "start" : 1636913626684,
-          "stop" : 1636913628562,
-          "duration" : 1878
+          "start" : 1637014177564,
+          "stop" : 1637014178665,
+          "duration" : 1101
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "2a4395458f1fd494e4b19f2c12497076"
+      "uid" : "0ba9e4414856e5cb6ede56e11205636d"
     } ],
-    "uid" : "fc9e0d14100a5cd37426c69c7defe844"
+    "uid" : "4a07664485cc9ad0ec0b86ddd8613d8a"
   } ],
   "name" : "timeline"
 }
