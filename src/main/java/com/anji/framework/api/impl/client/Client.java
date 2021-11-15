@@ -1,9 +1,10 @@
-package com.anji.framework.api.impl;
+package com.anji.framework.api.impl.client;
 
 import static com.anji.framework.api.constants.ResponseStatusCode.SC_OK;
 import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
 
+import com.anji.framework.api.impl.ApiResponseImpl;
 import com.anji.rest.api.pojo.Request;
 import com.anji.rest.api.pojo.UserResponse;
 import com.anji.rest.api.pojo.User;
@@ -42,7 +43,7 @@ public class Client {
 		request.setUser(user);
 		
 		LoginService<UserResponse> loginService = new LoginService<>(UserResponse.class);
-		ApiResponse<UserResponse> loginResponse = loginService.login(request);
+		ApiResponseImpl<UserResponse> loginResponse = loginService.login(request);
 		Assertions.assertThat(loginResponse.getResponseCode()).as("Login is not successful").isEqualTo(SC_OK);
 		
 		authKey = loginResponse.getResponse().getUser().getToken();

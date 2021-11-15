@@ -3,8 +3,8 @@ package com.anji.rest.api.service;
 import static com.anji.rest.api.constants.EndPoint.LOGIN;
 
 import com.anji.framework.api.builder.RequestBuilder;
-import com.anji.framework.api.impl.ApiResponse;
-import com.anji.framework.api.impl.BaseApiService;
+import com.anji.framework.api.impl.ApiResponseImpl;
+import com.anji.framework.api.impl.restassured.RestAssuredApiServiceImpl;
 import com.anji.framework.commons.config.ConfigLoader;
 import com.anji.rest.api.pojo.Request;
 
@@ -15,18 +15,22 @@ import com.anji.rest.api.pojo.Request;
  * @author anjiboddupally
  */
 
-public class LoginService<UserResponse> extends BaseApiService<UserResponse> {
+public class LoginService<UserResponse> extends RestAssuredApiServiceImpl {
+	
+	
+	private Class<UserResponse> klass;
 	
 	public LoginService(Class<UserResponse> kClass) {
-		super(ConfigLoader.getBaseUrl(), kClass);
+		super(ConfigLoader.getBaseUrl());
+		this.klass = kClass;
 	}
 
-	public ApiResponse<UserResponse> login(Request request) throws Exception {
+	public ApiResponseImpl<UserResponse> login(Request request) throws Exception {
 		
 		RequestBuilder builder = RequestBuilder.builder().pathUrl(LOGIN)
 				.requestObject(request).build();
 		
-		return post(builder);
+		return new ApiResponseImpl<UserResponse>(post(builder), klass);
 
 	}
 }

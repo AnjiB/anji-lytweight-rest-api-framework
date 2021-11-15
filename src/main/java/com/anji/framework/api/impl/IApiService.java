@@ -8,19 +8,19 @@ import com.anji.framework.api.builder.RequestBuilder;
  * @author anjiboddupally
  */
 
-public interface IApiService<T> {
+public interface IApiService {
 
-	ApiResponse<T> get(RequestBuilder builder) throws Exception;
+	GenericResponse get(RequestBuilder builder) throws Exception;
 	
 	
-	ApiResponse<T> post(RequestBuilder builder) throws Exception;
+	GenericResponse post(RequestBuilder builder) throws Exception;
 	
 	
-	ApiResponse<T> patch(RequestBuilder builder) throws Exception;
+	GenericResponse patch(RequestBuilder builder) throws Exception;
 	
 	
-	ApiResponse<T> put(RequestBuilder builder) throws Exception;
+	GenericResponse put(RequestBuilder builder) throws Exception;
 	
 	
-	ApiResponse<T> delete(RequestBuilder builder) throws Exception;
+	GenericResponse delete(RequestBuilder builder) throws Exception;
 }

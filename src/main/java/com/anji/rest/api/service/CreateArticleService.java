@@ -3,8 +3,8 @@ package com.anji.rest.api.service;
 import static com.anji.rest.api.constants.EndPoint.ARTICLES;
 
 import com.anji.framework.api.builder.RequestBuilder;
-import com.anji.framework.api.impl.ApiResponse;
-import com.anji.framework.api.impl.BaseApiService;
+import com.anji.framework.api.impl.ApiResponseImpl;
+import com.anji.framework.api.impl.restassured.RestAssuredApiServiceImpl;
 import com.anji.framework.commons.config.ConfigLoader;
 import com.anji.rest.api.pojo.User;
 
@@ -14,14 +14,16 @@ import com.anji.rest.api.pojo.User;
  * 
  * @author anjiboddupally
  */
-public class CreateArticleService<ArticleRequestAndResponse> extends BaseApiService<ArticleRequestAndResponse> {
+public class CreateArticleService<ArticleRequestAndResponse> extends RestAssuredApiServiceImpl {
 	
+	private Class<ArticleRequestAndResponse> klass;
 	
 	public CreateArticleService(Class<ArticleRequestAndResponse> kClass) {
-		super(ConfigLoader.getBaseUrl(), kClass);
+		super(ConfigLoader.getBaseUrl());
+		this.klass = kClass;
 	}
 
-	public ApiResponse<ArticleRequestAndResponse> createArticle(String username, String password, ArticleRequestAndResponse ar, boolean authRequired) throws Exception {
+	public ApiResponseImpl<ArticleRequestAndResponse> createArticle(String username, String password, ArticleRequestAndResponse ar, boolean authRequired) throws Exception {
 		
 		RequestBuilder builder = RequestBuilder.builder()
 				.username(username)
@@ -34,21 +36,20 @@ public class CreateArticleService<ArticleRequestAndResponse> extends BaseApiServ
 	}
 	
 	
-	public ApiResponse<ArticleRequestAndResponse> createArticle(RequestBuilder builder, ArticleRequestAndResponse ar) throws Exception {
-		
-		return post(builder);
+	public ApiResponseImpl<ArticleRequestAndResponse> createArticle(RequestBuilder builder, ArticleRequestAndResponse ar) throws Exception {
+		return new ApiResponseImpl<ArticleRequestAndResponse>(post(builder), klass);
 	}
 	
 	
-	public ApiResponse<ArticleRequestAndResponse> createArticle(String username, ArticleRequestAndResponse createArticleRequest) throws Exception {
+	public ApiResponseImpl<ArticleRequestAndResponse> createArticle(String username, ArticleRequestAndResponse createArticleRequest) throws Exception {
 		return createArticle(username, ConfigLoader.getDefaultPassword(), createArticleRequest, true);
 	}
 	
-	public ApiResponse<ArticleRequestAndResponse> createArticle(String username, ArticleRequestAndResponse createArticleRequest, boolean authRequired) throws Exception {
+	public ApiResponseImpl<ArticleRequestAndResponse> createArticle(String username, ArticleRequestAndResponse createArticleRequest, boolean authRequired) throws Exception {
 		return createArticle(username, ConfigLoader.getDefaultPassword(), createArticleRequest, authRequired);
 	}
 	
-	public ApiResponse<ArticleRequestAndResponse> createArticle(User user, ArticleRequestAndResponse createArticleRequest) throws Exception {
+	public ApiResponseImpl<ArticleRequestAndResponse> createArticle(User user, ArticleRequestAndResponse createArticleRequest) throws Exception {
 		return createArticle(user.getEmail(), user.getPassword(), createArticleRequest, true);
 	}
 }
