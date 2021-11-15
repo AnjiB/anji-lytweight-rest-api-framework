@@ -61,6 +61,15 @@ import com.anji.framework.api.impl.client.ClientService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.Maps;
 
+
+
+/**
+ * 
+ * Apache HttpClient Implementation of IAPIService.
+ * 
+ * @author anjiboddupally
+ */
+
 public class ApacheHttpImpl implements IApiService {
 
 	private HttpClientContext clientContext;

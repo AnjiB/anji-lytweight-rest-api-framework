@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
+ * 
+ * Generic Api response
+ * 
  * @author anjiboddupally
  */
 
