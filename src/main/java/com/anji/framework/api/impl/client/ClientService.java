@@ -1,4 +1,4 @@
-package com.anji.framework.api.impl;
+package com.anji.framework.api.impl.client;
 
 import java.util.concurrent.TimeUnit;
 

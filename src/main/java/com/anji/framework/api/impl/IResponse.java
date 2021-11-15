@@ -21,7 +21,7 @@ public interface IResponse<T> {
 
 	Map<String, String> getResponseCookies();
 
-	T getResponse();
+	T getResponse() throws Exception;
 
 	String getResponseContentType();
 }

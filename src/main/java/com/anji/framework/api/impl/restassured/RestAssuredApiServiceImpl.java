@@ -1,6 +1,7 @@
-package com.anji.framework.api.impl;
+package com.anji.framework.api.impl.restassured;
 
 import static com.anji.framework.api.utils.ApiUtil.getConfig;
+import static com.anji.framework.api.utils.TransformUtil.transform;
 import static io.restassured.RestAssured.given;
 
 import java.util.Objects;
@@ -9,6 +10,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.anji.framework.api.builder.RequestBuilder;
 import com.anji.framework.api.enums.ApiHeaders;
+import com.anji.framework.api.impl.GenericResponse;
+import com.anji.framework.api.impl.IApiService;
+import com.anji.framework.api.impl.client.Client;
+import com.anji.framework.api.impl.client.ClientService;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
@@ -21,40 +26,37 @@ import io.restassured.specification.RequestSpecification;
  */
 
 
-public abstract class BaseApiService<T> implements IApiService<T> {
+public abstract class RestAssuredApiServiceImpl implements IApiService {
 		
 	private String baseUri;
 
-	private Class<T> klass;
-
-	public BaseApiService(String basePath, Class<T> kClass) {
+	public RestAssuredApiServiceImpl(String basePath) {
 		this.baseUri = basePath;
-		this.klass = kClass;
 	}
 
 	@Override
-	public ApiResponse<T> get(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).get(), klass);
+	public GenericResponse get(RequestBuilder builder) throws Exception {
+		return transform(given().spec(getSpecBuilder(builder)).get());
 	}
 
 	@Override
-	public ApiResponse<T> post(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).post(), klass);
+	public GenericResponse post(RequestBuilder builder) throws Exception {
+		return transform(given().spec(getSpecBuilder(builder)).post());
 	}
 
 	@Override
-	public ApiResponse<T> patch(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).patch(), klass);
+	public GenericResponse patch(RequestBuilder builder) throws Exception {
+		return transform(given().spec(getSpecBuilder(builder)).patch());
 	}
 
 	@Override
-	public ApiResponse<T> put(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).put(), klass);
+	public GenericResponse put(RequestBuilder builder) throws Exception {
+		return transform(given().spec(getSpecBuilder(builder)).put());
 	}
 
 	@Override
-	public ApiResponse<T> delete(RequestBuilder builder) throws Exception {
-		return new ApiResponse<T>(given().spec(getSpecBuilder(builder)).delete(), klass);
+	public GenericResponse delete(RequestBuilder builder) throws Exception {
+		return transform(given().spec(getSpecBuilder(builder)).delete());
 	}
 	
 	

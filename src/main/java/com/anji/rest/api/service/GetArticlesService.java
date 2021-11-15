@@ -5,8 +5,8 @@ import static com.anji.rest.api.constants.EndPoint.ARTICLES;
 import java.util.Map;
 
 import com.anji.framework.api.builder.RequestBuilder;
-import com.anji.framework.api.impl.ApiResponse;
-import com.anji.framework.api.impl.BaseApiService;
+import com.anji.framework.api.impl.ApiResponseImpl;
+import com.anji.framework.api.impl.restassured.RestAssuredApiServiceImpl;
 import com.anji.framework.commons.config.ConfigLoader;
 
 /**
@@ -15,16 +15,18 @@ import com.anji.framework.commons.config.ConfigLoader;
  * 
  * @author anjiboddupally
  */
-public class GetArticlesService<ArticlesResponse> extends BaseApiService<ArticlesResponse> {
+public class GetArticlesService<ArticlesResponse> extends RestAssuredApiServiceImpl {
 
+	private Class<ArticlesResponse> klass;
+	
 	public GetArticlesService(Class<ArticlesResponse> kClass) {
-		super(ConfigLoader.getBaseUrl(), kClass);
-
+		super(ConfigLoader.getBaseUrl());
+		klass = kClass;
 	}
 
-	public ApiResponse<ArticlesResponse> getArticles(Map<String, String> queryParam) throws Exception {
+	public ApiResponseImpl<ArticlesResponse> getArticles(Map<String, String> queryParam) throws Exception {
 
 		RequestBuilder builder = RequestBuilder.builder().queryParameters(queryParam).pathUrl(ARTICLES).build();
-		return get(builder);
+		return new ApiResponseImpl<ArticlesResponse>(get(builder), klass);
 	}
 }

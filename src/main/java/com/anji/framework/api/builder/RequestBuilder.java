@@ -47,4 +47,6 @@ public class RequestBuilder {
 	@Default
 	private long waitTime = 10000;
 	
+	private boolean ignoreCerts;
+	
 }

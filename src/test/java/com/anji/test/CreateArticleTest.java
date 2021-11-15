@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.anji.framework.api.builder.RequestBuilder;
-import com.anji.framework.api.impl.ApiResponse;
+import com.anji.framework.api.impl.ApiResponseImpl;
 import com.anji.framework.commons.config.ConfigLoader;
 import com.anji.rest.api.data.TestDataFactory;
 import com.anji.rest.api.enus.Filter;
@@ -48,7 +48,7 @@ public class CreateArticleTest {
 	public void createArticleWithEmptiesAndNulls(ArticleRequestAndResponse invalidArticleTestDataObject)
 			throws Exception {
 
-		ApiResponse<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
+		ApiResponseImpl<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
 				invalidArticleTestDataObject);
 
 		response.getResponse().articleAssertThat().errorAssert().errorMessageIs("Unexpected error");
@@ -67,13 +67,13 @@ public class CreateArticleTest {
 		Map<String, String> queryParam = Maps.newHashMap();
 		queryParam.put(Filter.author.name(), userRequest.getUser().getUsername());
 
-		ApiResponse<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
+		ApiResponseImpl<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
 		assertThat(articlesResponse.getResponseCode()).isEqualTo(SC_OK);
 		articlesResponse.getResponse().assertThat().articleCountIs(0);
 		
 		ArticleRequestAndResponse requestObject = TestDataFactory.getValidArticle();
 
-		ApiResponse<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
+		ApiResponseImpl<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
 				requestObject);
 
 		assertThat(response.getResponseCode()).isEqualTo(SC_CREATED);
@@ -104,13 +104,13 @@ public class CreateArticleTest {
 		Map<String, String> queryParam = Maps.newHashMap();
 		queryParam.put(Filter.author.name(), userRequest.getUser().getUsername());
 
-		ApiResponse<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
+		ApiResponseImpl<ArticlesResponse> articlesResponse = getArticleService.getArticles(queryParam);
 		assertThat(articlesResponse.getResponseCode()).isEqualTo(SC_OK);
 		articlesResponse.getResponse().assertThat().articleCountIs(0);
 
 		ArticleRequestAndResponse requestObject = TestDataFactory.getValidArticle();
 
-		ApiResponse<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
+		ApiResponseImpl<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
 				requestObject);
 
 		assertThat(response.getResponseCode()).isEqualTo(SC_CREATED);
@@ -138,7 +138,7 @@ public class CreateArticleTest {
 	public void testArticleCannotBeCreatedWithoutAuthorization() throws Exception {
 
 		ArticleRequestAndResponse requestObject = TestDataFactory.getValidArticle();
-		ApiResponse<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
+		ApiResponseImpl<ArticleRequestAndResponse> response = creatArticle.createArticle(userRequest.getUser().getEmail(),
 				requestObject, false);
 		assertThat(response.getResponseCode()).isEqualTo(SC_UNAUTHORIZED);
 		response.getResponse().articleAssertThat().thereIsAnError().errorAssert().errorMessageIs("Unauthorized");
@@ -160,7 +160,7 @@ public class CreateArticleTest {
 		RequestBuilder builder = RequestBuilder.builder().username(userRequest.getUser().getEmail())
 				.password(ConfigLoader.getDefaultPassword()).isAuthRequired(true).pathUrl(ARTICLES)
 				.requestObject(requestObject).isCachedClient(true).build();
-		ApiResponse<ArticleRequestAndResponse> response = creatArticle.createArticle(builder, requestObject);
+		ApiResponseImpl<ArticleRequestAndResponse> response = creatArticle.createArticle(builder, requestObject);
 				
 
 		assertThat(response.getResponseCode()).isEqualTo(SC_CREATED);
